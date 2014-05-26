@@ -2,8 +2,9 @@
     <!-- BEGIN TOP NAVIGATION BAR -->
     <div class="header-inner">
         <!-- BEGIN LOGO -->
-        <a class="navbar-brand" href="index.html">
-            <img src="/assets/img/logo.png" alt="logo" class="img-responsive"/>
+        <a class="navbar-brand" href="/" style="padding: 11px 15px;">
+            <!--<img src="/assets/img/logo.png" alt="logo" class="img-responsive"/>-->
+            <i class="fa fa-cloud fa-2x" style="font-size: 20px;margin-left: 20px;"></i>&nbsp;SolarCloud
         </a>
         <!-- END LOGO -->
         <!-- BEGIN RESPONSIVE MENU TOGGLER -->
@@ -17,36 +18,50 @@
 
             <!-- END NOTIFICATION DROPDOWN -->
             <!-- BEGIN INBOX DROPDOWN -->
-
+            <li class="dropdown" id="header_inbox_bar">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="fa fa-bell"></i>
+				<span class="badge">
+					5
+				</span>
+                </a>
+                <ul class="dropdown-menu extended inbox">
+                    <li>
+                        <p>
+                            You have 12 new messages
+                        </p>
+                    </li>
+                </ul>
+            </li>
             <!-- END INBOX DROPDOWN -->
             <!-- BEGIN TODO DROPDOWN -->
 
             <!-- END TODO DROPDOWN -->
 
             <!-- BEGIN LANGUAGE DROPDOWN -->
-            <li class="dropdown language">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                    <img alt="" src="/assets/img/flags/us.png"/>
-				<span class="username">
-					 US
-				</span>
-                    <i class="fa fa-angle-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#"><img alt="" src="/assets/img/flags/es.png"/> Spanish</a>
-                    </li>
-                    <li>
-                        <a href="#"><img alt="" src="/assets/img/flags/de.png"/> German</a>
-                    </li>
-                    <li>
-                        <a href="#"><img alt="" src="/assets/img/flags/ru.png"/> Russian</a>
-                    </li>
-                    <li>
-                        <a href="#"><img alt="" src="/assets/img/flags/fr.png"/> French</a>
-                    </li>
-                </ul>
-            </li>
+            <!--<li class="dropdown language">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">-->
+                    <!--<img alt="" src="/assets/img/flags/us.png"/>-->
+				<!--<span class="username">-->
+					 <!--US-->
+				<!--</span>-->
+                    <!--<i class="fa fa-angle-down"></i>-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu">-->
+                    <!--<li>-->
+                        <!--<a href="#"><img alt="" src="/assets/img/flags/es.png"/> Spanish</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#"><img alt="" src="/assets/img/flags/de.png"/> German</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#"><img alt="" src="/assets/img/flags/ru.png"/> Russian</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#"><img alt="" src="/assets/img/flags/fr.png"/> French</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
             <!-- END LANGUAGE DROPDOWN -->
 
             <!-- BEGIN USER LOGIN DROPDOWN -->
