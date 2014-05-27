@@ -14,6 +14,9 @@ module.exports = function (app) {
     app.get('/events',function(req,res){
         res.render('events');
     });
+    app.get('/profile',function(req,res){
+       res.render('profile');
+    });
 
     app.get('/powerInfo/:period/:date', function (req, res, next) {
         var period = req.params.period;
