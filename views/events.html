@@ -61,41 +61,53 @@
             </div>
             <div class="dataTables_wrapper form-inline">
                 <div class="row" style="margin-bottom: 10px;">
-                    <div class="col-md-3 col-sm-12">
-                        <div id="sample_editable_1_length" class="dataTables_length">
-                            <label>类型:
-                                <div class="select2-container form-control input-small" id="s2id_autogen1">
-                                    <a href="javascript:void(0)" onclick="return false;" class="select2-choice"
-                                       tabindex="-1">
-                                        <span class="select2-chosen">All</span>
-                                        <abbr class="select2-search-choice-close"></abbr>
-                                        <span class="select2-arrow"><b></b></span>
-                                    </a><input class="select2-focusser select2-offscreen" type="text"
-                                               id="s2id_autogen2">
-                                </div>
-                                <select size="1" name="sample_editable_1_length" aria-controls="sample_editable_1"
-                                        class="form-control input-small select2-offscreen" tabindex="-1">
-                                    <option value="5" selected="selected">All</option>
-                                    <option value="15">15</option>
-                                    <option value="20">20</option>
-                                    <option value="-1">All</option>
+                    <div class="col-md-12">
+                        <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+                            <div id="sample_editable_1_length" class="dataTables_length">
+                                <label>类型:
+                                    <!--<div class="select2-container form-control input-small" id="s2id_autogen1">-->
+                                    <!--<a href="javascript:void(0)" onclick="return false;" class="select2-choice"-->
+                                    <!--tabindex="-1">-->
+                                    <!--<span class="select2-chosen">All</span>-->
+                                    <!--<abbr class="select2-search-choice-close"></abbr>-->
+                                    <!--<span class="select2-arrow"><b></b></span>-->
+                                    <!--</a><input class="select2-focusser select2-offscreen" type="text"-->
+                                    <!--id="s2id_autogen2">-->
+                                    <!--</div>-->
+                                    <!--<select size="1" name="sample_editable_1_length" aria-controls="sample_editable_1"-->
+                                    <!--class="form-control input-small select2-offscreen" tabindex="-1">-->
+                                    <!--<option value="5" selected="selected">All</option>-->
+                                    <!--<option value="15">15</option>-->
+                                    <!--<option value="20">20</option>-->
+                                    <!--<option value="-1">All</option>-->
+                                    <!--</select>-->
+                                    <select class="form-control" name="" id="">
+                                        <option value="">All</option>
+                                        <option value="">信息</option>
+                                        <option value="">警告</option>
+                                        <option value="">错误</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                            <label>日期:
+                                <input class="form-control input-small" type="text"/>-
+                                <input class="form-control input-small" type="text"/>
+                            </label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <label>设备:
+                                <select class="form-control">
+                                    <option value="">全部设备</option>
+                                    <option value="">EA8989113053</option>
+                                    <option value="">8882000A10902151</option>
                                 </select>
                             </label>
                         </div>
-                    </div>
-                    <div class="col-md-5 col-sm-12">
-                        <label>日期:
-                            <input class="form-control input-small" type="text"/>-
-                            <input class="form-control input-small" type="text"/>
-                        </label>
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                        <div>
-                            <label>设备: <input type="text" class="form-control input-small"></label>
+                        <div class="col-lg-1 col-md-6 col-sm-12">
+                            <input type="button" class="btn" value="查找"/>
                         </div>
-                    </div>
-                    <div class="col-md-1 col-sm-12">
-                        <input type="button" class="btn" value="查找"/>
                     </div>
                 </div>
                 <div class="row">
