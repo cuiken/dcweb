@@ -184,6 +184,11 @@
 <script>
     jQuery(document).ready(function () {
         App.init();
+
+        $("#override").addClass('active');
+        $("#override > a > span.arrow").removeClass().addClass('selected');
+        $("#override > .sub-menu > li:nth-child(2)").addClass('active');
+
     });
 </script>
 </body>

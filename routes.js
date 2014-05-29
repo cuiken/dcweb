@@ -20,6 +20,9 @@ module.exports = function (app) {
     app.get('/power',function(req,res){
         res.render('powerChart');
     });
+    app.get('/home',function(req,res){
+       res.render('home');
+    });
 
     app.get('/powerInfo/:period/:date', function (req, res, next) {
         var period = req.params.period;

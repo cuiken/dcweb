@@ -48,7 +48,7 @@
                         </li>
                         <li class="pull-right">
                             <div id="dashboard-report-range" class="dashboard-date-range tooltips" data-placement="top"
-                                 data-original-title="Change dashboard date range">
+                                 data-original-title="Change date range">
                                 <i class="fa fa-calendar"></i>
 								<span>
 								</span>
@@ -149,8 +149,12 @@
     jQuery(document).ready(function () {
         App.init();
         Index.init();
-        Index.initCalendar(); // init index page's custom scripts
+//        Index.initCalendar(); // init index page's custom scripts
         Index.initDashboardDaterange();
+
+        $("#charts").addClass('active');
+        $("#charts > a > span.arrow").removeClass().addClass('selected');
+        $("#charts > .sub-menu > li:nth-child(1)").addClass('active');
 
         var myChart = echarts.init(document.getElementById('echarts'));
 
