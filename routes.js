@@ -27,7 +27,7 @@ module.exports = function (app) {
     app.get('/profile', function (req, res) {
         res.render('profile');
     });
-    app.get('/power', function (req, res) {
+    app.get('/CO2', function (req, res) {
         res.render('powerChart');
     });
 

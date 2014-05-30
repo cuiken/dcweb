@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="page-title">
-                        电量及功率
+                        CO2减排量和收益
                         <small>太空站</small>
                     </h3>
                     <ul class="page-breadcrumb breadcrumb">
@@ -44,7 +44,7 @@
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="#">电量及功率</a>
+                            <a href="#">CO2减排量和收益</a>
                         </li>
                         <li class="pull-right">
                             <div id="dashboard-report-range" class="dashboard-date-range tooltips" data-placement="top"
@@ -144,6 +144,7 @@
 
 <script src="/assets/scripts/app.js" type="text/javascript"></script>
 <script src="/assets/scripts/index.js" type="text/javascript"></script>
+<script src="/assets/scripts/chart-co2-yield.js" type="text/javascript"></script>
 
 <script>
     jQuery(document).ready(function () {
@@ -152,9 +153,11 @@
 //        Index.initCalendar(); // init index page's custom scripts
         Index.initDashboardDaterange();
 
+        CO2Chart.init();
+
         $("#charts").addClass('active');
         $("#charts > a > span.arrow").removeClass().addClass('selected');
-        $("#charts > .sub-menu > li:nth-child(1)").addClass('active');
+        $("#charts > .sub-menu > li:nth-child(2)").addClass('active');
     });
 </script>
 </body>
