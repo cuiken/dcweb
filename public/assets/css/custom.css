@@ -10,3 +10,7 @@
     color: #fff;
     background-color: gray;
 }
+
+.login .content .register-form {
+    display: block;
+}

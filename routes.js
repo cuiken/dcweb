@@ -11,6 +11,9 @@ module.exports = function (app) {
     app.get('/login', function (req, res) {
         res.render('login');
     });
+    app.post('/login', function (req, res) {
+        res.redirect('override');
+    });
     app.get('/register', function (req, res) {
         res.render('register');
     });
@@ -28,9 +31,14 @@ module.exports = function (app) {
         res.render('profile');
     });
     app.get('/CO2', function (req, res) {
-        res.render('powerChart');
+        res.render('CO2_yield_chart');
     });
-
+    app.get('/stations', function (req, res) {
+        res.render('stations');
+    });
+    app.get('/photoWall', function (req, res) {
+        res.render('photo_wall');
+    });
     app.get('/powerInfo/:period/:date', function (req, res, next) {
         var period = req.params.period;
         var date = req.params.date;
