@@ -14,8 +14,8 @@ module.exports = function (app) {
     app.post('/login', function (req, res) {
         res.redirect('override');
     });
-    app.get('/register', function (req, res) {
-        res.render('register');
+    app.get('/signup', function (req, res) {
+        res.render('signup');
     });
     app.get('/override', function (req, res) {
         res.render('override');
