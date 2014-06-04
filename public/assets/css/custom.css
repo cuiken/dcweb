@@ -14,3 +14,23 @@
 .login .content .register-form {
     display: block;
 }
+
+.content .form-actions{
+    line-height: 2.5;
+}
+body.login{
+    background: #fbfbfb !important;
+}
+.login .content{
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 0 3px #eee,inset 0 0 3px #fff;
+}
+.img-rounded{
+    border-radius:6px !important;
+}
+.img-circle{
+    border-radius: 50% !important;
+}
+.page-sidebar-menu .start{
+    margin-top: 35px;
+}

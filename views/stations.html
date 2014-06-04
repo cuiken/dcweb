@@ -21,24 +21,59 @@
     <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-    <link href="/assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>
-    <!--<link href="/assets/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>-->
-    <!--<link href="/assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css"/>-->
-    <!-- END PAGE LEVEL PLUGIN STYLES -->
+
     <link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
     <!-- BEGIN THEME STYLES -->
     <link href="/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/css/pages/tasks.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="/assets/css/pages/profile.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+        .breadcrumb {
+            padding: 1px 15px;
+        }
+
+        .portfolio-info span {
+            font-size: 14px;
+        }
+
+        .portfolio-info {
+            padding: 10px;
+        }
+
+        .row.portfolio-block {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .row.portfolio-block:hover {
+            background: #f1f1f1;
+        }
+
+        .share_station {
+            position: absolute;
+            right: 25px;
+            top: 5px;
+        }
+
+        .remove_station {
+            position: absolute;
+            right: 25px;
+            top: 5px;
+        }
+
+        .portfolio-block .portfolio-text{
+            padding: 0;
+        }
+        .portfolio-block .portfolio-stat{
+            padding: 0;
+        }
+    </style>
 </head>
 <body class="page-header-fixed">
 <%- include header.html %>
@@ -52,8 +87,170 @@
             <%- include theme_panel.html %>
             <div class="row">
                 <div class="col-md-12">
+                    <h3 class="page-title">
+                        电站列表
+                        <small>拥有电站和共享电站</small>
+                    </h3>
+                    <ul class="page-breadcrumb breadcrumb">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="add-portfolio">
+											<span>
+												立刻创建属于您的电站，即可享受我们给您提供的服务。
+											</span>
+                        <a href="#" class="btn icn-only green">Add a new Station <i
+                                class="m-icon-swapright m-icon-white"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+            <div class="row portfolio-block">
+                <div class="col-md-3  portfolio-text">
+                    <img class="img-rounded" src="http://solarcloud.zeversolar.com/res/def/icon/plant04.jpg" alt="">
+
+                    <div class="portfolio-text-info">
+                        <h4>Demo Plant</h4>
+                    </div>
+                </div>
+                <div class="col-md-9 portfolio-stat">
+                    <div class="portfolio-info">
+                        E-Today
+											<span>
+                                                0.72KWh
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        E-Total
+											<span>
+                                                6.62MWh
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        总收益
+											<span>
+                                                3131.87$
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        CO2减排量
+											<span>
+                                                5.01T
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        逆变器
+											<span>
+                                                1/2
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        监控器
+											<span>
+                                                1/1
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        新错误
+											<span>
+                                                3
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        数据更新时间
+											<span>
+                                                2014-06-04 09:16:47
+											</span>
+                    </div>
+                </div>
+                <i class="share_station fa fa-group"></i>
+                <!--
+                <div class="col-md-2">
+                    <div class="portfolio-btn">
+                        <a href="#" class="btn bigicn-only">
+											<span>
+												Manage
+											</span>
+                        </a>
+                    </div>
+                </div>-->
+            </div>
+            <div class="row portfolio-block">
+                <div class="col-md-3  portfolio-text">
+
+                    <img class="img-rounded" src="http://solarcloud.zeversolar.com/res/def/icon/plant01.jpg" alt="">
+
+                    <div class="portfolio-text-info">
+                        <h4>应用测试12</h4>
+                    </div>
 
                 </div>
+                <div class="col-md-9 portfolio-stat">
+                    <div class="portfolio-info">
+                        E-Today
+											<span>
+                                                0.0KWh
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        E-Total
+											<span>
+                                                20.83MWh
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        总收益
+											<span>
+                                                14578.87$
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        CO2减排量
+											<span>
+                                                15.01T
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        逆变器
+											<span>
+                                                0/12
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        监控器
+											<span>
+                                                0/1
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        新错误
+											<span>
+                                                32
+											</span>
+                    </div>
+                    <div class="portfolio-info">
+                        数据更新时间
+											<span>
+                                                2014-03-04 08:16:47
+											</span>
+                    </div>
+                </div>
+                <i class="remove_station fa fa-times-circle"></i>
+                <!--
+                <div class="col-md-2">
+                    <div class="portfolio-btn">
+                        <a href="#" class="btn bigicn-only">
+											<span>
+												Manage
+											</span>
+                        </a>
+                    </div>
+                </div>-->
+            </div>
             </div>
         </div>
     </div>
@@ -78,7 +275,7 @@
 
 <script>
     jQuery(document).ready(function () {
-        App.init(); // initlayout and core plugins
+        App.init();
 
         $("#powerlist").addClass('active');
         $("#powerlist > a > span.arrow").removeClass().addClass('selected');
