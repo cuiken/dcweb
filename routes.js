@@ -36,6 +36,9 @@ module.exports = function (app) {
     app.get('/stations', function (req, res) {
         res.render('stations');
     });
+    app.get('/station/create', function (req, res) {
+        res.render('add_station');
+    });
     app.get('/photoWall', function (req, res) {
         res.render('photo_wall');
     });

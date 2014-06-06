@@ -186,7 +186,8 @@ var FormWizard = function () {
 
                 if (current >= total) {
                     $('#form_wizard_1').find('.button-next').hide();
-                    $('#form_wizard_1').find('.button-submit').show();
+                    $('#form_wizard_1').find('.button-submit').hide();
+                    $('#form_wizard_1').find('.button-previous').hide();
                     displayConfirm();
                 } else {
                     $('#form_wizard_1').find('.button-next').show();

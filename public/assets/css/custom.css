@@ -15,7 +15,7 @@
     display: block;
 }
 
-.content .form-actions{
+.signup .content .form-actions{
     line-height: 2.5;
 }
 body.login{
@@ -33,4 +33,10 @@ body.login{
 }
 .page-sidebar-menu .start{
     margin-top: 35px;
+}
+
+.page-title{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
 }
