@@ -52,6 +52,8 @@ var PowerCharts = function () {
                     },
                     toolbox: {
                         show: true,
+                        orient:'horizontal',
+//                        x:'center',
                         feature: {
                             mark: {show: true},
                             dataZoom: {show: true},
@@ -77,7 +79,8 @@ var PowerCharts = function () {
                             axisLabel: {
                                 formatter: '{value} ' + unit
                             },
-                            splitArea: {show: true}
+                            splitArea: {show: false},
+                            precision:1
                         }
                     ],
                     series: [
@@ -88,6 +91,11 @@ var PowerCharts = function () {
                             markLine: {
                                 data: [
                                     {type: 'average', name: '平均值'}
+                                ]
+                            },
+                            markPoint: {
+                                data: [
+                                    {type: 'max', name: '最大值'}
                                 ]
                             }
                         },
@@ -104,8 +112,8 @@ var PowerCharts = function () {
                     ]
                 };
                 option.dataZoom.show = true;
-                option.dataZoom.start = 0;
-                option.dataZoom.end = 50;
+                option.dataZoom.start = 20;
+                option.dataZoom.end = 80;
                 myChart.setOption(option);
             }
         }

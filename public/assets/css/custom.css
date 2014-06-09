@@ -1,5 +1,8 @@
 /* here you can put your own css to customize and override the theme */
 
+body{
+    font-family: Exo,'Open Sans', sans-serif;
+}
 .page-content .page-breadcrumb.breadcrumb .dashboard-date-range  {
     position: relative;
     top: -8px;
@@ -39,4 +42,31 @@ body.login{
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
     margin-bottom: 25px;
+}
+.header {
+    width: 100%;
+    padding: 0 20px 0 20px;
+    margin: 0;
+    border: 0px;
+    padding: 0px;
+    box-shadow: none;
+    height: 50px;
+    min-height: 50px;
+}
+
+.header .navbar-nav > li {
+    margin: 0px;
+    padding: 4px;
+}
+
+.naonymouse-header .navbar-nav > li{
+    padding: 0;
+}
+.theme-panel {
+    width: 400px;
+    margin-top: -10px;
+    margin-right: 1px;
+    z-index: 999;
+    float: right;
+    position: relative;
 }

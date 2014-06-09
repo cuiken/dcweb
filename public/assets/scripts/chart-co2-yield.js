@@ -45,15 +45,15 @@ var CO2Chart = function () {
                             type: 'value',
                             name: '收益',
                             axisLabel: {
-                                formatter: '{value} $'
+                                formatter: '${value}'
                             },
-                            splitArea: {show: true}
+                            splitArea: {show: false}
                         },
                         {
                             type: 'value',
                             name: 'CO2减排量',
                             axisLabel: {
-                                formatter: '{value} Kg'
+                                formatter: '{value}Kg'
                             },
                             splitLine: {show: false}
                         }
