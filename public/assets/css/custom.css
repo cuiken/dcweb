@@ -70,3 +70,6 @@ body.login{
     float: right;
     position: relative;
 }
+.portlet.box.light-grey{
+    border: 0;
+}
