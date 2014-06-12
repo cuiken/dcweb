@@ -10,6 +10,16 @@ var PowerCharts = function () {
 
             var myChart = echarts.init(document.getElementById('echarts'));
 
+//            window.onresize = function() {
+//
+//                myChart.resize();
+//            };
+
+            $(".page-content").resize(function(){
+
+                myChart.resize();
+            });
+
             showLoading();
             drawChart();
 

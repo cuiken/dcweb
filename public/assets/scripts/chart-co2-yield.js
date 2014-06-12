@@ -7,6 +7,17 @@ var CO2Chart = function () {
         init: function () {
             var myChart = echarts.init(document.getElementById('echarts'));
 
+//            $(window).resize(function () {
+//                    myChart.resize();
+//            }),
+//            window.onresize = function() {
+//
+//                myChart.resize();
+//            };
+            $(".page-content").resize(function(){
+
+                myChart.resize();
+            });
 
             draw();
 
