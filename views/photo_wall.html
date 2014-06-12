@@ -22,7 +22,9 @@
     <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
 
-    <link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
+    <!--<link rel="stylesheet" href="/assets/plugins/revolution_slider/css/rs-style.css" media="screen">-->
+    <link rel="stylesheet" href="/assets/plugins/revolution_slider/rs-plugin/css/settings4.1.css" media="screen">
+
     <!-- BEGIN THEME STYLES -->
     <link href="/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
@@ -35,13 +37,47 @@
     <link rel="shortcut icon" href="favicon.ico"/>
 
     <style>
-        .thumbnail {
+
+        :-webkit-full-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-sizing: border-box;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        :-webkit-full-screen-ancestor:root {
+            overflow: hidden;
+        }
+
+        :-webkit-full-screen-ancestor {
+            z-index: auto;
+            opacity: 1;
+            mask: none;
+            clip: auto;
+            filter: none;
+            -webkit-transform: none;
+            -webkit-transition: none;
+        }
+
+        pre:-webkit-full-screen {
+            background-color: white;
+        }
+
+        pre:-webkit-full-screen:after {
+            content: 'Only one element can be targeted for full screen';
+        }
+
+        .tohide {
+            display: none;
+        }
+
+        :-webkit-full-screen .tohide {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            max-width: 310px;
-            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -58,62 +94,54 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="page-title">
-                       太空站
+                        太空站
                         <small>照片墙</small>
                     </h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-4 ">
-                    <div class="thumbnail">
-                        <a href="#">
-                            <img src="http://static.bootcss.com/www/assets/img/codeguide.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 ">
-                    <div class="thumbnail">
-                        <a href="#">
-                            <img src="http://static.bootcss.com/www/assets/img/gruntjs.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 ">
-                    <div class="thumbnail">
-                        <a href="#">
-                            <img src="http://static.bootcss.com/www/assets/img/codeguide.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 ">
-                    <div class="thumbnail">
-                        <a href="#">
-                            <img src="http://static.bootcss.com/www/assets/img/gruntjs.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 ">
-                    <div class="thumbnail">
-                        <a href="#">
-                            <img src="http://static.bootcss.com/www/assets/img/codeguide.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 ">
-                    <div class="thumbnail">
-                        <a href="#">
-                            <img src="http://static.bootcss.com/www/assets/img/gruntjs.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 ">
-                    <div class="thumbnail">
-                        <a href="#">
-                            <img src="http://static.bootcss.com/www/assets/img/codeguide.png" alt=""/>
-                        </a>
-                    </div>
-                </div>
+            <div id="fs">
+                <button class="btn" id="slide-fs">fullscreen</button>
             </div>
+
+            <div class="fullwidthbanner-container slider-main">
+            <div class="fullwidthabnner">
+            <ul id="revolutionul" style="display:none;">
+            <!-- THE FIRST SLIDE -->
+            <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400"
+                data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
+                <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                <img src="assets/img/sliders/revolution/bg1.jpg" alt="">
+
+                <div class="caption lfb"
+                     data-x="640"
+                     data-y="55"
+                     data-speed="700"
+                     data-start="1000"
+                     data-easing="easeOutExpo">
+                    <img src="assets/img/sliders/revolution/man-winner.png" alt="Image 1">
+                </div>
+            </li>
+
+            <li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="700" data-delay="9400"
+                data-thumb="assets/img/sliders/revolution/thumbs/thumb4.jpg">
+                <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                <img src="assets/img/sliders/revolution/bg-goodssolutions.jpg" alt="">
+
+
+            </li>
+            </ul>
+            <div class="tp-bannertimer tp-bottom"></div>
+            </div>
+            </div>
+            <!--<div class="row">-->
+                <!--<div class="col-sm-12 col-md-12 ">-->
+
+                    <!--<img class="" src="http://riotdesign.eu/assets/img/home-slider/bg-goodssolutions.jpg">-->
+
+                    <!--<img class="" src="http://riotdesign.eu/assets/img/home-slider/bg-archea.jpg">-->
+                    <!--<img class="" src="http://riotdesign.eu/assets/img/home-slider/bg-viamasini80.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </div>
@@ -133,6 +161,11 @@
 <script src="/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 <script src="/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 
+<script type="text/javascript"
+        src="/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins-4.1.min.js"></script>
+<script type="text/javascript"
+        src="/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution-4.1.min.js"></script>
+
 <script src="/assets/scripts/app.js" type="text/javascript"></script>
 
 <script>
@@ -143,6 +176,100 @@
         $("#photowall > a > span.arrow").removeClass().addClass('selected');
         $("#photowall > .sub-menu > li:nth-child(1)").addClass('active');
 
+
+        document.cancelFullScreen = document.webkitCancelFullScreen || document.mozCancelFullScreen || document.msExitFullscreen || document.exitFullscreen;
+
+        document.addEventListener('keydown', function (e) {
+            switch (e.keyCode) {
+                case 13: // ENTER. ESC should also take you out of fullscreen by default.
+                    e.preventDefault();
+                    document.cancelFullScreen();
+                    break;
+            }
+        }, false);
+
+        function doFullScreen(elem) {
+            if (elem.webkitRequestFullScreen) {
+                elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            } else if (elem.requestFullScreen) {
+                elem.requestFullScreen();
+            }
+        }
+
+        function onFullScreenChange() {
+            console.log("fullscreen change!");
+        };
+
+
+        function enterFullscreen(elem) {
+            var elem = elem || document.body;
+            elem.onwebkitfullscreenchange = onFullScreenChange;
+            elem.onmozfullscreenchange = onFullScreenChange;
+            elem.onfullscreenchange = onFullScreenChange;
+            if (document.webkitIsFullScreen) {
+                document.cancelFullScreen();
+            } else {
+                doFullScreen(elem);
+            }
+        }
+
+        document.getElementById('slide-fs').onclick = function (e) {
+            enterFullscreen(document.querySelector('.fullwidthabnner'))
+        };
+
+
+        jQuery('.fullwidthabnner').revolution(
+                {
+                    delay: 2000,
+                    startheight: 380,
+                    startwidth: 1150,
+
+                    hideThumbs: 10,
+
+                    thumbWidth: 100,                         // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+                    thumbHeight: 50,
+                    thumbAmount: 5,
+
+                    navigationType: "none",                // bullet, thumb, none
+                    navigationArrows: "solo",                // nexttobullets, solo (old name verticalcentered), none
+
+                    navigationStyle: "round",                // round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
+
+
+                    navigationHAlign: "center",              // Vertical Align top,center,bottom
+                    navigationVAlign: "bottom",              // Horizontal Align left,center,right
+                    navigationHOffset: 0,
+                    navigationVOffset: 20,
+
+                    soloArrowLeftHalign: "left",
+                    soloArrowLeftValign: "center",
+                    soloArrowLeftHOffset: 20,
+                    soloArrowLeftVOffset: 0,
+
+                    soloArrowRightHalign: "right",
+                    soloArrowRightValign: "center",
+                    soloArrowRightHOffset: 20,
+                    soloArrowRightVOffset: 0,
+
+                    touchenabled: "on",                      // Enable Swipe Function : on/off
+                    onHoverStop: "off",                       // Stop Banner Timet at Hover on Slide on/off
+
+                    stopAtSlide: -1,
+                    stopAfterLoops: -1,
+
+                    hideCaptionAtLimit: 0,					// It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+                    hideAllCaptionAtLilmit: 0,				// Hide all The Captions if Width of Browser is less then this value
+                    hideSliderAtLimit: 0,					// Hide the whole slider, and stop also functions if Width of Browser is less than this value
+
+                    shadow: 1,                               //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows  (No Shadow in Fullwidth Version !)
+                    fullWidth: "on"   ,                       // Turns On or Off the Fullwidth Image Centering in FullWidth Modus
+
+                    fullScreen:"on"
+                });
     });
 </script>
 
