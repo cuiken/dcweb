@@ -38,7 +38,31 @@ var CO2Chart = function () {
                             dataView: {show: true, readOnly: false},
                             magicType: {show: true, type: ['line', 'bar']},
                             restore: {show: true},
-                            saveAsImage: {show: true}
+                            saveAsImage: {show: true},
+                            csv : {
+                                show : true,
+                                title : 'CSV',
+                                icon : 'image://../assets/img/avatar.png',
+                                onclick : function(){
+                                    alert('myToolHandler')
+                                }
+                            },
+                            txt:{
+                                show : true,
+                                title : 'CSV',
+                                icon : 'image://../assets/img/avatar.png',
+                                onclick : function(){
+                                    alert('myToolHandler')
+                                }
+                            },
+                            print:{
+                                show : true,
+                                title : 'print',
+                                icon : 'image://../assets/img/avatar.png',
+                                onclick : function(){
+                                    window.print();
+                                }
+                            }
                         }
                     },
                     calculable: true,

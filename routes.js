@@ -42,6 +42,42 @@ module.exports = function (app) {
     app.get('/photoWall', function (req, res) {
         res.render('photo_wall');
     });
+
+    app.get('/config/equip', function (req, res) {
+        res.render('config/equip');
+    });
+    app.get('/config/report', function (req, res) {
+        res.render('config/report');
+    });
+    app.get('/config/share', function (req, res) {
+        res.render('config/share');
+    });
+    app.get('/config/station', function (req, res) {
+        res.render('config/station');
+    });
+
+    app.get('/admin/stations', function (req, res) {
+        res.render('admin/stationList');
+    });
+    app.get('/admin/accounts', function (req, res) {
+        res.render('admin/accountList');
+    });
+    app.get('/admin/dicts', function (req, res) {
+        res.render('admin/dictList');
+    });
+    app.get('/admin/events', function (req, res) {
+        res.render('admin/eventList');
+    });
+    app.get('/admin/invs', function (req, res) {
+        res.render('admin/invList');
+    });
+    app.get('/admin/pmus', function (req, res) {
+        res.render('admin/pmuList');
+    });
+    app.get('/admin/users', function (req, res) {
+        res.render('admin/userList');
+    });
+
     app.get('/powerInfo/:period/:date', function (req, res, next) {
         var period = req.params.period;
         var date = req.params.date;

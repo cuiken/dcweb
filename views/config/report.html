@@ -1,0 +1,190 @@
+<!doctype html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <title>Config Report | Solar Cloud - Zever Solar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <meta name="MobileOptimized" content="320">
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN THEME STYLES -->
+    <link href="/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="/assets/css/pages/profile.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .tabbable-custom > .tab-content {
+            border: 0;
+        }
+    </style>
+</head>
+<body class="page-header-fixed">
+<%- include ../header.html %>
+<div class="clearfix">
+</div>
+
+<div class="page-container">
+    <%- include ../left_menu.html %>
+
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <%- include ../dialog_sample.html %>
+            <%- include ../theme_panel.html %>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="page-title">
+                        太空站
+                        <small>报告配置</small>
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabbable tabbable-custom tabbable-full-width">
+
+                        <div class="tab-content">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#tab_1_1" data-toggle="tab">日报告</a>
+                                </li>
+                                <li>
+                                    <a href="#tab_1_2" data-toggle="tab">月报告</a>
+                                </li>
+                                <li>
+                                    <a href="#tab_1_3" data-toggle="tab">事件报告</a>
+                                </li>
+                            </ul>
+                            <div class="tab-pane active" id="tab_1_1">
+                                <form action="">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">状态</label>
+                                        <div class="col-sm-8">
+                                            <input type="radio"/>激活
+                                            <input type="radio"/>禁用
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">接受邮件地址</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" cols="40" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">发送时间</label>
+                                        <div class="col-sm-8">
+                                            每日<select class="form-control">
+                                                <option>0.00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-default">立即发送报告</button>
+                                        <button class="btn btn-primary">保存</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="tab_1_2">
+                                <form action="">
+                                    <div class="form-group">
+                                        <label class="control-label">状态</label>
+                                        <div class="groups">
+                                            <input type="radio"/>激活
+                                            <input type="radio"/>禁用
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">接受邮件地址</label>
+                                        <div class="groups">
+                                            <textarea class="form-control" cols="40" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-default">立即发送报告</button>
+                                        <button class="btn btn-primary">保存</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="tab_1_3">
+                                <form action="">
+                                    <div class="form-group">
+                                        <label class="control-label">状态</label>
+                                        <div class="groups">
+                                            <input type="radio"/>激活
+                                            <input type="radio"/>禁用
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">接受邮件地址</label>
+                                        <div class="groups">
+                                            <textarea class="form-control" cols="40" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">发送方式</label>
+                                        每隔
+                                        <select class="form-control">
+                                            <option value="1">1</option>
+                                        </select>小时
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">手动生成报告</label>
+                                        日期 <input type="date"/> - <input type="date"/>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-default">立即发送报告</button>
+                                        <button class="btn btn-primary">保存</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ../footer.html %>
+<!--[if lt IE 9]>
+<script src="/assets/plugins/respond.min.js"></script>
+<script src="/assets/plugins/excanvas.min.js"></script>
+<![endif]-->
+
+<script src="/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<script src="/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"
+        type="text/javascript"></script>
+<script src="/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+
+<script src="/assets/scripts/app.js" type="text/javascript"></script>
+<script>
+    jQuery(document).ready(function(){
+        App.init();
+
+        $("#config").addClass('active');
+        $("#config > a > span.arrow").removeClass().addClass('selected');
+        $("#config > .sub-menu > li:nth-child(2)").addClass('active');
+    });
+</script>
+</body>
+</html>

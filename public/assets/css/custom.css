@@ -73,3 +73,7 @@ body.login{
 .portlet.box.light-grey{
     border: 0;
 }
+
+.dataTables_paginate.paging_bootstrap{
+    float: right;
+}
