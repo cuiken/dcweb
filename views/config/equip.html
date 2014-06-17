@@ -39,7 +39,57 @@
 
     <div class="page-content-wrapper">
         <div class="page-content">
-            <%- include ../dialog_sample.html %>
+            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">属性</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <td>序列号:</td>
+                                    <td>EA8989113053</td>
+                                </tr>
+                                </thead>
+
+                                <tr>
+                                    <td>类型:</td>
+                                    <td>监控器</td>
+                                </tr>
+                                <tr>
+                                    <td>设备名称:</td>
+                                    <td>Slave</td>
+                                </tr>
+                                <tr>
+                                    <td>型号:</td>
+                                    <td>PMU</td>
+                                </tr>
+                                <tr>
+                                    <td>制造商:</td>
+                                    <td>Zeversolar</td>
+                                </tr>
+                                <tr>
+                                    <td>品牌:</td>
+                                    <td>Eversolar</td>
+                                </tr>
+                                <tr>
+                                    <td>软件版本号:</td>
+                                    <td>12W13806-331B</td>
+                                </tr>
+                                <tr>
+                                    <td>硬件版本号:</td>
+                                    <td>L1.5-C1.4-M1.5</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
             <%- include ../theme_panel.html %>
             <div class="row">
                 <div class="col-md-12">
@@ -68,31 +118,37 @@
                                     <th>序列号</th>
                                     <th>型号</th>
                                     <th>下载数据</th>
-                                    <th>设置</th>
-                                    <th>属性</th>
+                                    <!--<th>设置</th>-->
+                                    <!--<th>属性</th>-->
                                     <th>操作</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td>EA8989113053</td>
+                                    <td><img src="http://solarcloud.zeversolar.com/images/pum.gif" alt=""/></td>
+                                    <td><a href="#portlet-config" data-toggle="modal">EA8989113053</a></td>
                                     <td>EA8989113053</td>
                                     <td>PMU</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td> <a href="#"><i class="fa fa-download"></i></a></td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <td>
+                                        <a href="#"><i class="fa fa-cog"></i></a>&nbsp;&nbsp;
+                                        <a href="#"><i class="fa fa-times-circle"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td>8882000A10902151</td>
+                                    <td><img src="http://solarcloud.zeversolar.com/images/dev1.gif" alt=""/></td>
+                                    <td><a href="#portlet-config" data-toggle="modal">8882000A10902151</a></td>
                                     <td>8882000A10902151</td>
                                     <td>TL2000</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td> <a href="#"><i class="fa fa-download"></i></a></td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <td>
+                                        <a href="#"><i class="fa fa-cog"></i></a>&nbsp;&nbsp;
+                                        <a href="#"><i class="fa fa-times-circle"></i></a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

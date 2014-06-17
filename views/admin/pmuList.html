@@ -43,6 +43,85 @@
     <%- include ../left_menu.html %>
     <div class="page-content-wrapper">
         <div class="page-content">
+            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">属性</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <td>电站名称:</td>
+                                    <td>Demo Plant</td>
+                                </tr>
+                                </thead>
+
+                                <tr>
+                                    <td>序列号:</td>
+                                    <td>EA8989113053</td>
+                                </tr>
+                                <tr>
+                                    <td>注册码:</td>
+                                    <td>AAAAAAAAAAAAAAAA</td>
+                                </tr>
+                                <tr>
+                                    <td>类型:</td>
+                                    <td>Slave</td>
+                                </tr>
+                                <tr>
+                                    <td>型号:</td>
+                                    <td>PMU</td>
+                                </tr>
+                                <tr>
+                                    <td>自动升级:</td>
+                                    <td>打开</td>
+                                </tr>
+                                <tr>
+                                    <td>需要升级:</td>
+                                    <td>不需要</td>
+                                </tr>
+                                <tr>
+                                    <td>已使用存储空间:</td>
+                                    <td>118M</td>
+                                </tr>
+                                <tr>
+                                    <td>总存储空间:</td>
+                                    <td>989M</td>
+                                </tr>
+                                <tr>
+                                    <td>状态:</td>
+                                    <td>在线</td>
+                                </tr>
+                                <tr>
+                                    <td>软件版本号:</td>
+                                    <td>12W13806-331B</td>
+                                </tr>
+                                <tr>
+                                    <td>硬件版本号:</td>
+                                    <td>L1.5-C1.4-M1.5</td>
+                                </tr>
+                                <tr>
+                                    <td>最后登录IP:</td>
+                                    <td>58.210.73.82</td>
+                                </tr>
+                                <tr>
+                                    <td>Last Login DCGate:</td>
+                                    <td>DCG100</td>
+                                </tr>
+                                <tr>
+                                    <td>最近登录时间:</td>
+                                    <td>2014-06-15 02:53:43</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
             <%- include ../theme_panel.html %>
             <div class="row">
                 <div class="col-md-12">
@@ -54,9 +133,9 @@
             </div>
             <div class="row" style="margin-bottom: 20px;">
                 <div class="col-md-12">
-                    <form class="form-inline" action="">
+                    <form class="form-inline" action="" method="get">
                         <div class="form-group">
-                            <label class="control-label">国家</label>
+                            <label class="control-label">类型</label>
                             <!--<div class="controls">-->
                             <select class="form-control">
                                 <option value="all">All</option>
@@ -65,28 +144,56 @@
 
                         </div>
                         <div class="form-group">
-                            <label class="control-label">州/省</label>
+                            <label class="control-label">型号</label>
                             <select class="form-control">
                                 <option value="all">All</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="control-label">关注</label>
+                            <label class="control-label">状态</label>
                             <select class="form-control">
                                 <option value="all">All</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <!--<label class="control-label">电站名称</label>-->
-                            <input class="form-control" type="text" placeholder="电站名称"/>
+
+                            <input class="form-control" type="text" placeholder="序列号"/>
                         </div>
                         <div class="form-group">
-                            <!--<label class="control-label">管理员帐号</label>-->
-                            <input class="form-control" type="text" placeholder="管理员帐号"/>
+
+                            <input class="form-control" type="text" placeholder="硬件版本"/>
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control" type="text" placeholder="软件版本"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">自动升级</label>
+                            <select class="form-control">
+                                <option value="all">All</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">需要升级</label>
+                            <select class="form-control">
+                                <option value="all">All</option>
+                            </select>
                         </div>
 
-                        <button class="btn btn-primary" href="">查询</button>
+                        <button class="btn btn-primary" href="#">查询</button>
                     </form>
+                </div>
+            </div>
+            <div class="row margin-bottom-10 ">
+                <div class="col-md-12">
+                    <button class="btn btn-primary">新增</button>
+                    <button class="btn btn-info">打开</button>
+                    <button class="btn btn-warning">关闭</button>
+                    <button class="btn btn-danger">升级</button>
+                    <div class="pull-right">
+                        <button class="btn">CSV</button>
+                        <button class="btn">TXT</button>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -94,39 +201,37 @@
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th></th>
-                            <th>电站名称</th>
-                            <th>国家</th>
-                            <th>州/省</th>
-                            <th>城市</th>
-                            <th>创建日期</th>
-                            <th>装机容量</th>
-                            <th>数据更新日期</th>
-                            <th>管理员账号</th>
+                            <th><input type="checkbox"/></th>
+                            <th>序列号</th>
+                            <th>硬件版本</th>
+                            <th>软件版本</th>
+                            <th>自动升级</th>
+                            <th>状态</th>
+                            <th>电站</th>
+                            <th>属性</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
+                            <td><input type="checkbox"/></td>
+                            <td>EA8989113053</td>
+                            <td>L1.5-C1.4-M1.5</td>
+                            <td>12W13806-331B</td>
+                            <td>自动</td>
                             <td><i class="fa fa-circle"></i></td>
-                            <td>BJDXPV</td>
-                            <td>中国</td>
-                            <td>北京</td>
-                            <td>北京</td>
-                            <td>2014-06-05</td>
-                            <td>3.1</td>
-                            <td>2014-06-16</td>
-                            <td>meiliahui@163.com</td>
+                            <td>Demo Plant</td>
+                            <td><a href="#portlet-config" data-toggle="modal">查看详细</a></td>
                         </tr>
                         <tr>
+                            <td><input type="checkbox"/></td>
+                            <td>EA8989123002</td>
+                            <td>V1.1</td>
+                            <td>V1.1</td>
+                            <td>禁止</td>
                             <td><i class="fa fa-circle-o"></i></td>
-                            <td>sub company</td>
-                            <td>澳大利亚</td>
-                            <td>新南威尔士州</td>
-                            <td>sidney</td>
-                            <td>2014-06-05</td>
-                            <td>3.1</td>
-                            <td>2014-06-16</td>
-                            <td>abs_k@sina.com</td>
+                            <td>Aslanidis</td>
+                            <td><a href="#portlet-config" data-toggle="modal">查看详细</a></td>
+
                         </tr>
                         </tbody>
                     </table>

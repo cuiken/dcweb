@@ -43,6 +43,64 @@
     <%- include ../left_menu.html %>
     <div class="page-content-wrapper">
         <div class="page-content">
+            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">属性</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <td>序列号:</td>
+                                    <td>EA8989113053</td>
+                                </tr>
+                                </thead>
+
+                                <tr>
+                                    <td>设备名称:</td>
+                                    <td>Eversol TL</td>
+                                </tr>
+
+                                <tr>
+                                    <td>型号:</td>
+                                    <td>TLC017K</td>
+                                </tr>
+                                <tr>
+                                    <td>制造商:</td>
+                                    <td>ZEverSolar</td>
+                                </tr>
+                                <tr>
+                                    <td>品牌:</td>
+                                    <td>ZEverSolar</td>
+                                </tr>
+
+                                <tr>
+                                    <td>软件版本号:</td>
+                                    <td>1.1.1.1</td>
+                                </tr>
+                                <tr>
+                                    <td>硬件版本号:</td>
+                                    <td>2.2.2.2</td>
+                                </tr>
+                                <tr>
+                                    <td>累计发电量:</td>
+                                    <td>25.96 MWh</td>
+                                </tr>
+                                <tr>
+                                    <td>累计发电时长</td>
+                                    <td>4101H</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
             <%- include ../theme_panel.html %>
             <div class="row">
                 <div class="col-md-12">
@@ -56,7 +114,7 @@
                 <div class="col-md-12">
                     <form class="form-inline" action="">
                         <div class="form-group">
-                            <label class="control-label">国家</label>
+                            <label class="control-label">类型</label>
                             <!--<div class="controls">-->
                             <select class="form-control">
                                 <option value="all">All</option>
@@ -64,29 +122,24 @@
                             <!--</div>-->
 
                         </div>
-                        <div class="form-group">
-                            <label class="control-label">州/省</label>
-                            <select class="form-control">
-                                <option value="all">All</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">关注</label>
-                            <select class="form-control">
-                                <option value="all">All</option>
-                            </select>
-                        </div>
+
                         <div class="form-group">
                             <!--<label class="control-label">电站名称</label>-->
                             <input class="form-control" type="text" placeholder="电站名称"/>
                         </div>
                         <div class="form-group">
                             <!--<label class="control-label">管理员帐号</label>-->
-                            <input class="form-control" type="text" placeholder="管理员帐号"/>
+                            <input class="form-control" type="text" placeholder="序列号"/>
                         </div>
 
                         <button class="btn btn-primary" href="">查询</button>
                     </form>
+                </div>
+            </div>
+            <div class="row pull-right margin-bottom-10">
+                <div class="col-md-12">
+                    <button class="btn">CSV</button>
+                    <button class="btn">TXT</button>
                 </div>
             </div>
             <div class="row">
@@ -94,39 +147,44 @@
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th></th>
-                            <th>电站名称</th>
-                            <th>国家</th>
-                            <th>州/省</th>
+                            <th>序列号</th>
+                            <th>类型</th>
+                            <th>厂家</th>
+                            <th>品牌</th>
+                            <th>电站</th>
                             <th>城市</th>
-                            <th>创建日期</th>
-                            <th>装机容量</th>
-                            <th>数据更新日期</th>
-                            <th>管理员账号</th>
+                            <th>状态</th>
+                            <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td><i class="fa fa-circle"></i></td>
-                            <td>BJDXPV</td>
-                            <td>中国</td>
-                            <td>北京</td>
-                            <td>北京</td>
-                            <td>2014-06-05</td>
-                            <td>3.1</td>
-                            <td>2014-06-16</td>
-                            <td>meiliahui@163.com</td>
+
+                            <td>888017KA11900894</td>
+                            <td>TLC017K</td>
+                            <td>ZEverSolar</td>
+                            <td>ZEverSolar</td>
+                            <td>KOYGIANOS1</td>
+                            <td>KILKIS</td>
+                            <td><i class="fa fa-circle-o"></i></td>
+                            <td>
+                                <a href="#portlet-config" data-toggle="modal">属性</a> &nbsp;
+                                <a href="#">下载</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td><i class="fa fa-circle-o"></i></td>
-                            <td>sub company</td>
-                            <td>澳大利亚</td>
-                            <td>新南威尔士州</td>
-                            <td>sidney</td>
-                            <td>2014-06-05</td>
-                            <td>3.1</td>
-                            <td>2014-06-16</td>
-                            <td>abs_k@sina.com</td>
+
+                            <td>888017KA11900665</td>
+                            <td>TLC017K</td>
+                            <td>ZEverSolar</td>
+                            <td>ZEverSolar</td>
+                            <td>KOYGIANOS1</td>
+                            <td>KILKIS</td>
+                            <td><i class="fa fa-circle"></i></td>
+                            <td>
+                                <a href="#portlet-config" data-toggle="modal">属性</a> &nbsp;
+                                <a href="#">下载</a>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
