@@ -11,6 +11,7 @@
     <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
+
     <link href="/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css"/>
 
 
@@ -34,17 +35,17 @@
                 <div class="col-md-12">
                     <h3 class="page-title">
                         太空站
-                        <small>CO2减排量和收益</small>
+                        <small>vac</small>
                     </h3>
                 </div>
             </div>
             <div class="row" style="margin-bottom: 20px;">
                 <div class="col-md-4">
                     <ul class="nav nav-pills">
-                        <li id="bydays" class="active"><a href="#">日</a></li>
-                        <li id="bymonth"><a href="#">月</a></li>
-                        <li id="byyear"><a href="#">年</a></li>
-                        <li id="bytotal"><a href="#">总计</a></li>
+                        <ul class="nav nav-pills">
+                            <li id="bydays" class="active"><a href="#">日</a></li>
+                            <li id="by7days"><a href="#">七日</a></li>
+                        </ul>
                     </ul>
                 </div>
                 <div id="example" class="col-md-4">
@@ -147,7 +148,7 @@
 
         $("#charts").addClass('active');
         $("#charts > a > span.arrow").removeClass().addClass('selected');
-        $("#charts > .sub-menu > li:nth-child(1)").addClass('active');
+        $("#charts > .sub-menu > li:nth-child(6)").addClass('active');
     });
 </script>
 </body>

@@ -32,9 +32,30 @@ module.exports = function (app) {
     app.get('/profile', function (req, res) {
         res.render('profile');
     });
-    app.get('/CO2', function (req, res) {
+
+    app.get('/chart/CO2', function (req, res) {
         res.render('chart/CO2_yield_chart');
     });
+    app.get('/chart/fac', function (req, res) {
+        res.render('chart/fac_chart');
+    });
+    app.get('/chart/iac', function (req, res) {
+        res.render('chart/iac_chart');
+    });
+    app.get('/chart/invtemp', function (req, res) {
+        res.render('chart/inv_temperature_chart');
+    });
+    app.get('/chart/ipv', function (req, res) {
+        res.render('chart/ipv_chart');
+    });
+    app.get('/chart/vac', function (req, res) {
+        res.render('chart/vac_chart');
+    });
+    app.get('/chart/vpv', function (req, res) {
+        res.render('chart/vpv_chart');
+    });
+
+
     app.get('/stations', function (req, res) {
         res.render('stations');
     });
