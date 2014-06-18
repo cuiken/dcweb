@@ -29,7 +29,7 @@
     <link href="/assets/css/pages/profile.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <style>
-        .form-group{
+        .form-group {
             padding: 5px 10px;
         }
     </style>
@@ -40,259 +40,268 @@
 </div>
 
 <div class="page-container">
-    <%- include ../left_menu.html %>
-    <div class="page-content-wrapper">
-        <div class="page-content">
-            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                            <h4 class="modal-title">属性</h4>
-                        </div>
-                        <div class="modal-body">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <td>电站名称:</td>
-                                    <td>Demo Plant</td>
-                                </tr>
-                                </thead>
+<%- include ../left_menu.html %>
+<div class="page-content-wrapper">
+<div class="page-content">
+<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title">属性</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>电站名称:</td>
+                        <td>Demo Plant</td>
+                    </tr>
+                    </thead>
 
-                                <tr>
-                                    <td>序列号:</td>
-                                    <td>EA8989113053</td>
-                                </tr>
-                                <tr>
-                                    <td>注册码:</td>
-                                    <td>AAAAAAAAAAAAAAAA</td>
-                                </tr>
-                                <tr>
-                                    <td>类型:</td>
-                                    <td>Slave</td>
-                                </tr>
-                                <tr>
-                                    <td>型号:</td>
-                                    <td>PMU</td>
-                                </tr>
-                                <tr>
-                                    <td>自动升级:</td>
-                                    <td>打开</td>
-                                </tr>
-                                <tr>
-                                    <td>需要升级:</td>
-                                    <td>不需要</td>
-                                </tr>
-                                <tr>
-                                    <td>已使用存储空间:</td>
-                                    <td>118M</td>
-                                </tr>
-                                <tr>
-                                    <td>总存储空间:</td>
-                                    <td>989M</td>
-                                </tr>
-                                <tr>
-                                    <td>状态:</td>
-                                    <td>在线</td>
-                                </tr>
-                                <tr>
-                                    <td>软件版本号:</td>
-                                    <td>12W13806-331B</td>
-                                </tr>
-                                <tr>
-                                    <td>硬件版本号:</td>
-                                    <td>L1.5-C1.4-M1.5</td>
-                                </tr>
-                                <tr>
-                                    <td>最后登录IP:</td>
-                                    <td>58.210.73.82</td>
-                                </tr>
-                                <tr>
-                                    <td>Last Login DCGate:</td>
-                                    <td>DCG100</td>
-                                </tr>
-                                <tr>
-                                    <td>最近登录时间:</td>
-                                    <td>2014-06-15 02:53:43</td>
-                                </tr>
-                            </table>
+                    <tr>
+                        <td>序列号:</td>
+                        <td>EA8989113053</td>
+                    </tr>
+                    <tr>
+                        <td>注册码:</td>
+                        <td>AAAAAAAAAAAAAAAA</td>
+                    </tr>
+                    <tr>
+                        <td>类型:</td>
+                        <td>Slave</td>
+                    </tr>
+                    <tr>
+                        <td>型号:</td>
+                        <td>PMU</td>
+                    </tr>
+                    <tr>
+                        <td>自动升级:</td>
+                        <td>打开</td>
+                    </tr>
+                    <tr>
+                        <td>需要升级:</td>
+                        <td>不需要</td>
+                    </tr>
+                    <tr>
+                        <td>已使用存储空间:</td>
+                        <td>118M</td>
+                    </tr>
+                    <tr>
+                        <td>总存储空间:</td>
+                        <td>989M</td>
+                    </tr>
+                    <tr>
+                        <td>状态:</td>
+                        <td>在线</td>
+                    </tr>
+                    <tr>
+                        <td>软件版本号:</td>
+                        <td>12W13806-331B</td>
+                    </tr>
+                    <tr>
+                        <td>硬件版本号:</td>
+                        <td>L1.5-C1.4-M1.5</td>
+                    </tr>
+                    <tr>
+                        <td>最后登录IP:</td>
+                        <td>58.210.73.82</td>
+                    </tr>
+                    <tr>
+                        <td>Last Login DCGate:</td>
+                        <td>DCG100</td>
+                    </tr>
+                    <tr>
+                        <td>最近登录时间:</td>
+                        <td>2014-06-15 02:53:43</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<%- include ../theme_panel.html %>
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="page-title">
+            监控器列表
+            <small></small>
+        </h3>
+    </div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-12">
+
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-search"></i>查询
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <form class="form-horizontal" action="" method="get">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">类型</label>
+
+                            <div class="col-md-8">
+                                <select class="form-control">
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">型号</label>
+
+                            <div class="col-md-8">
+                                <select class="form-control">
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">状态</label>
+
+                            <div class="col-md-8">
+                                <select class="form-control">
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">硬件版本</label>
+
+                            <div class="col-md-8">
+                                <input class="form-control" type="text"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">软件版本</label>
+
+                            <div class="col-md-8">
+                                <input class="form-control" type="text"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">自动升级</label>
+
+                            <div class="col-md-8">
+                                <select class="form-control">
+                                    <option value="all">All</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <%- include ../theme_panel.html %>
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="page-title">
-                        监控器列表
-                        <small></small>
-                    </h3>
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 20px;">
-                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">需要升级</label>
 
-                    <div class="portlet">
-                        <div class="portlet-title">
-                            <div class="caption">
-                            <i class="fa fa-search"></i>查询
-                            </div>
-                            <div class="tools">
-                                <a href="javascript:;" class="collapse"></a>
+                            <div class="col-md-8">
+                                <select class="form-control">
+                                    <option value="all">All</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="portlet-body">
-                            <form class="form-horizontal" action="" method="get">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="control-label col-md-4">类型</label>
-                                <div class="col-md-8">
-                                    <select class="form-control">
-                                        <option value="all">All</option>
-                                    </select>
-                                </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">序列号</label>
 
+                            <div class="col-md-8">
+                                <input class="form-control" type="text"/>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">型号</label>
-                                <div class="col-md-8">
-                                    <select class="form-control">
-                                        <option value="all">All</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">状态</label>
-                                <div class="col-md-8">
-                                    <select class="form-control">
-                                        <option value="all">All</option>
-                                    </select>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-4">
+                            <button class="btn btn-primary" href="#">查询</button>
+                        </div>
 
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="control-label col-md-4">硬件版本</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">软件版本</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">自动升级</label>
-                                <div class="col-md-8">
-                                    <select class="form-control">
-                                        <option value="all">All</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="control-label col-md-4">需要升级</label>
-                                <div class="col-md-8">
-                                    <select class="form-control">
-                                        <option value="all">All</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-4">序列号</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text"/>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-md-offset-4">
-                                <button class="btn btn-primary" href="#">查询</button>
-                            </div>
-
-                        </div>
-                    </form>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row margin-bottom-10 ">
-                <div class="col-md-12">
-                    <button class="btn btn-primary">新增</button>
-                    <button class="btn btn-info">打开</button>
-                    <button class="btn btn-warning">关闭</button>
-                    <button class="btn btn-danger">升级</button>
-                    <div class="pull-right">
-                        <button class="btn">CSV</button>
-                        <button class="btn">TXT</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <table class="table table-striped table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th><input type="checkbox"/></th>
-                            <th>序列号</th>
-                            <th>硬件版本</th>
-                            <th>软件版本</th>
-                            <th>自动升级</th>
-                            <th>状态</th>
-                            <th>电站</th>
-                            <th>属性</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><input type="checkbox"/></td>
-                            <td>EA8989113053</td>
-                            <td>L1.5-C1.4-M1.5</td>
-                            <td>12W13806-331B</td>
-                            <td>自动</td>
-                            <td><i class="fa fa-circle"></i></td>
-                            <td>Demo Plant</td>
-                            <td><a href="#portlet-config" data-toggle="modal">查看详细</a></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"/></td>
-                            <td>EA8989123002</td>
-                            <td>V1.1</td>
-                            <td>V1.1</td>
-                            <td>禁止</td>
-                            <td><i class="fa fa-circle-o"></i></td>
-                            <td>Aslanidis</td>
-                            <td><a href="#portlet-config" data-toggle="modal">查看详细</a></td>
-
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-5 col-sm-12">
-                    <div class="dataTables_info" id="sample_1_info">Showing 1 to 10 of 5 entries</div>
-                </div>
-                <div class="col-md-7 col-sm-12">
-                    <div class="dataTables_paginate paging_bootstrap">
-                        <ul class="pagination" style="visibility: visible;">
-                            <li class="prev"><a href="#" title="Prev"><i class="fa fa-angle-left"></i></a></li>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li class="next"><a href="#" title="Next"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+<div class="row margin-bottom-10 ">
+    <div class="col-md-12">
+        <button class="btn btn-primary">新增</button>
+        <button class="btn btn-info">打开</button>
+        <button class="btn btn-warning">关闭</button>
+        <button class="btn btn-danger">升级</button>
+        <div class="pull-right">
+            <button class="btn">CSV</button>
+            <button class="btn">TXT</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th><input type="checkbox"/></th>
+                <th>序列号</th>
+                <th>硬件版本</th>
+                <th>软件版本</th>
+                <th>自动升级</th>
+                <th>状态</th>
+                <th>电站</th>
+                <th>属性</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>EA8989113053</td>
+                <td>L1.5-C1.4-M1.5</td>
+                <td>12W13806-331B</td>
+                <td>自动</td>
+                <td><i class="fa fa-circle"></i></td>
+                <td>Demo Plant</td>
+                <td><a href="#portlet-config" data-toggle="modal">查看详细</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>EA8989123002</td>
+                <td>V1.1</td>
+                <td>V1.1</td>
+                <td>禁止</td>
+                <td><i class="fa fa-circle-o"></i></td>
+                <td>Aslanidis</td>
+                <td><a href="#portlet-config" data-toggle="modal">查看详细</a></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-5 col-sm-12">
+        <div class="dataTables_info" id="sample_1_info">Showing 1 to 10 of 5 entries</div>
+    </div>
+    <div class="col-md-7 col-sm-12">
+        <div class="dataTables_paginate paging_bootstrap">
+            <ul class="pagination" style="visibility: visible;">
+                <li class="prev"><a href="#" title="Prev"><i class="fa fa-angle-left"></i></a></li>
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="next"><a href="#" title="Next"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 </div>
 
 <%- include ../footer.html %>
@@ -314,7 +323,7 @@
 
 <script src="/assets/scripts/app.js" type="text/javascript"></script>
 <script>
-    jQuery(document).ready(function(){
+    jQuery(document).ready(function () {
         App.init();
 
         $("#admin").addClass('active');
