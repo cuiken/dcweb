@@ -17,21 +17,23 @@ module.exports = function (app) {
     app.get('/signup', function (req, res) {
         res.render('signup');
     });
+
     app.get('/override', function (req, res) {
-        res.render('override');
+        res.render('override/override');
     });
+    app.get('/events', function (req, res) {
+        res.render('override/events');
+    });
+
     app.get('/forgot-password', function (req, res) {
         res.render('forgot-password');
     });
 
-    app.get('/events', function (req, res) {
-        res.render('events');
-    });
     app.get('/profile', function (req, res) {
         res.render('profile');
     });
     app.get('/CO2', function (req, res) {
-        res.render('CO2_yield_chart');
+        res.render('chart/CO2_yield_chart');
     });
     app.get('/stations', function (req, res) {
         res.render('stations');
