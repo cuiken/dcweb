@@ -18,6 +18,10 @@ module.exports = function (app) {
         res.render('signup');
     });
 
+    app.get('/terms', function (req, res) {
+        res.render('terms_service');
+    });
+
     app.get('/override', function (req, res) {
         res.render('override/override');
     });

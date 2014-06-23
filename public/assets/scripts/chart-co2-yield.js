@@ -28,7 +28,8 @@ var CO2Chart = function () {
                         trigger: 'axis'
                     },
                     legend: {
-                        data: ['CO2减排量', '收益']
+                        data: ['CO2减排量', '收益'],
+                        y:'bottom'
                     },
                     toolbox: {
                         show: true,

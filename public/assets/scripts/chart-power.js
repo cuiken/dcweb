@@ -54,23 +54,35 @@ var PowerCharts = function () {
 
             function draw(x, y, unit) {
                 var option = {
+
                     tooltip: {
                         trigger: 'axis'
                     },
                     legend: {
-                        data: ['发电量', '总发电量']
+                        data: ['8882000A10902151','8882000A10902152','8882000A10902153','8882000A10902154','8882000A10902155', '总发电量'],
+                        x:'left',
+                        padding:[5,80]
                     },
                     toolbox: {
                         show: true,
-                        orient:'horizontal',
-//                        x:'center',
+                        orient:'vertical',
+                        x:'right',
+                        y:'center',
                         feature: {
                             mark: {show: true},
                             dataZoom: {show: true},
                             dataView: {show: true, readOnly: false},
                             magicType: {show: true, type: ['line', 'bar']},
                             restore: {show: true},
-                            saveAsImage: {show: true}
+                            saveAsImage: {show: true},
+                            print:{
+                                show : true,
+                                title : 'print',
+                                icon : 'image://../assets/img/avatar.png',
+                                onclick : function(){
+                                    window.print();
+                                }
+                            }
                         }
                     },
                     calculable: true,
@@ -95,7 +107,7 @@ var PowerCharts = function () {
                     ],
                     series: [
                         {
-                            name: '发电量',
+                            name: '8882000A10902151',
                             type: 'line',
                             data: y,
                             markLine: {
@@ -108,6 +120,26 @@ var PowerCharts = function () {
                                     {type: 'max', name: '最大值'}
                                 ]
                             }
+                        },
+                        {
+                            name: '8882000A10902152',
+                            type: 'line',
+                            data: y
+                        },
+                        {
+                            name: '8882000A10902153',
+                            type: 'line',
+                            data: y
+                        },
+                        {
+                            name: '8882000A10902154',
+                            type: 'line',
+                            data: y
+                        },
+                        {
+                            name: '8882000A10902155',
+                            type: 'line',
+                            data: y
                         },
                         {
                             name: '总发电量',

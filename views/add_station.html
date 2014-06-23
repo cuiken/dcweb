@@ -59,28 +59,28 @@
                         <img src="http://solarcloud.zeversolar.com/images/add2.gif" alt=""/>
                     </div>
                     <div class="col-md-6">
-                        <form action="" class="">
+                        <form action="" class="form-horizontal">
                             <h3>设备信息</h3>
 
                             <div class="form-group">
                                 <label class="control-label visible-ie8 visible-ie9">序列号</label>
 
-                                <div class="input-icon">
-                                    <i class="fa fa-lock"></i>
+                                <!--<div class="input-icon">-->
+                                    <!--<i class="fa fa-lock"></i>-->
                                     <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
                                            id="psno"
                                            placeholder="序列号" name="psno"/>
-                                </div>
+                                <!--</div>-->
                             </div>
                             <div class="form-group">
                                 <label class="control-label visible-ie8 visible-ie9">注册码</label>
 
-                                <div class="input-icon">
-                                    <i class="fa fa-lock"></i>
+                                <!--<div class="input-icon">-->
+                                    <!--<i class="fa fa-lock"></i>-->
                                     <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
                                            id="registno"
                                            placeholder="注册码" name="registno"/>
-                                </div>
+                                <!--</div>-->
                             </div>
                             <h3>电站信息</h3>
 
@@ -102,39 +102,61 @@
                                 <label class="control-label visible-ie8 visible-ie9">预装机容量</label>
                                 <input class="form-control placeholder-no-fix" placeholder="预装机容量 KW" type="text"/>
                             </div>
-                            <!--<div class="form-group"><label class="control-label visible-ie8 visible-ie9">国家</label>-->
-                                <!--<select id="e2" style="width:100%" data-placeholder="Select a State">-->
-                                    <!--<option value=""></option>-->
-                                    <!--<optgroup label="Asia">-->
-                                        <!--<option value="">China</option>-->
-                                    <!--</optgroup>-->
-                                    <!--<optgroup label="South America">-->
-                                        <!--<option value="">America</option>-->
-                                    <!--</optgroup>-->
+                            <div class="form-group"><label class="control-label visible-ie8 visible-ie9">国家</label>
+                                <select id="e2" style="width:100%" data-placeholder="选择国家">
+                                    <option value=""></option>
+                                    <optgroup label="Asia">
+                                        <option value="">China</option>
+                                    </optgroup>
+                                    <optgroup label="South America">
+                                        <option value="">America</option>
+                                    </optgroup>
 
-                                <!--</select>-->
+                                </select>
 
-                            <!--</div>-->
+                            </div>
+                            <div class="form-group"><label class="control-label visible-ie8 visible-ie9">州/省</label>
+                                <select id="e4" style="width:100%" data-placeholder="选择州/省">
+                                    <option value=""></option>
+
+                                </select>
+
+                            </div>
 
                             <div class="form-group">
                                 <div class="input-group" id="panel">
-                                    <input class="form-control" id="address" type="textbox" value="suzhou" placeholder="your address">
+                                    <input class="form-control" id="address" type="textbox" value="Egensevej 194 Storvorde" placeholder="your address">
                                     <div class="input-group-btn">
-                                        <input class="btn" id="codeAddress" type="button" value="地理编码">
+                                        <input class="btn" id="codeAddress" type="button" value="定位">
                                     </div>
                                 </div>
-
                             </div>
                             <div class="form-group">
                                 <div id="map-canvas" style="height: 200px;width: auto;"></div>
                             </div>
                             <div class="form-group">
-                                <i class="fa fa-dollar"></i>
-                                <i class="fa fa-yen"></i>
-                                <i class="fa fa-eur"></i>
-                                <select class="form-control">
-                                    <option value=""></option>
-                                    <option value="">&euro;</option>
+
+                                <div class="radio">
+                                    <label class="form-inline">
+                                        <input type="radio" name="currency"/>  $
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="currency"/> ￥
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="currency"/> <i class="fa fa-eur"></i>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="currency"/> Kr
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <select id="e3" style="width:100%" data-placeholder="时区">
+                                <option value=""></option>
+
+                                    <option value="1">(GMT-09:00) 阿拉斯加</option>
                                 </select>
                             </div>
                             <div class="form-actions">
@@ -189,6 +211,8 @@
         $("#powerlist > .sub-menu > li:nth-child(2)").addClass('active');
 
         $("#e2").select2();
+        $("#e3").select2();
+        $("#e4").select2();
 
         var geocoder;
         var map;
@@ -213,6 +237,17 @@
                         map: map,
                         position: results[0].geometry.location
                     });
+
+                    var location=results[0].geometry.location;
+                    var address=results[0].address_components.reverse();
+
+                    var addds="";
+                    $.each(address,function(key,val){
+                        addds+=val['long_name'];
+                    });
+
+                    alert("经纬度： "+location.toString()+" 详细地址: "+addds);
+
                 } else {
                     alert('Geocode was not successful for the following reason: ' + status);
                 }
