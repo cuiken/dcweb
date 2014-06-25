@@ -20,7 +20,7 @@
     <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/plugins/select2/select2.css" rel="stylesheet" />
+    <link href="/assets/plugins/select2/select2.css" rel="stylesheet"/>
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN THEME STYLES -->
@@ -66,20 +66,20 @@
                                 <label class="control-label visible-ie8 visible-ie9">序列号</label>
 
                                 <!--<div class="input-icon">-->
-                                    <!--<i class="fa fa-lock"></i>-->
-                                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                                           id="psno"
-                                           placeholder="序列号" name="psno"/>
+                                <!--<i class="fa fa-lock"></i>-->
+                                <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
+                                       id="psno"
+                                       placeholder="序列号" name="psno"/>
                                 <!--</div>-->
                             </div>
                             <div class="form-group">
                                 <label class="control-label visible-ie8 visible-ie9">注册码</label>
 
                                 <!--<div class="input-icon">-->
-                                    <!--<i class="fa fa-lock"></i>-->
-                                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                                           id="registno"
-                                           placeholder="注册码" name="registno"/>
+                                <!--<i class="fa fa-lock"></i>-->
+                                <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
+                                       id="registno"
+                                       placeholder="注册码" name="registno"/>
                                 <!--</div>-->
                             </div>
                             <h3>电站信息</h3>
@@ -87,15 +87,15 @@
                             <div class="form-group">
                                 <label class="control-label visible-ie8 visible-ie9">电站名称</label>
 
-                                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                                           id="stationname"
-                                           placeholder="电站名称" name="stationname"/>
+                                <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
+                                       id="stationname"
+                                       placeholder="电站名称" name="stationname"/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label visible-ie8 visible-ie9">公司名称</label>
-                                 <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                                           id="company"
-                                           placeholder="公司名称" name="company"/>
+                                <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
+                                       id="company"
+                                       placeholder="公司名称" name="company"/>
                             </div>
                             <div class="form-group">
 
@@ -125,7 +125,9 @@
 
                             <div class="form-group">
                                 <div class="input-group" id="panel">
-                                    <input class="form-control" id="address" type="textbox" value="Egensevej 194 Storvorde" placeholder="your address">
+                                    <input class="form-control" id="address" type="textbox"
+                                           value="Egensevej 194 Storvorde" placeholder="your address">
+
                                     <div class="input-group-btn">
                                         <input class="btn" id="codeAddress" type="button" value="定位">
                                     </div>
@@ -134,27 +136,24 @@
                             <div class="form-group">
                                 <div id="map-canvas" style="height: 200px;width: auto;"></div>
                             </div>
+
                             <div class="form-group">
-
-                                <div class="radio">
-                                    <label class="form-inline">
-                                        <input type="radio" name="currency"/>  $
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="currency"/> ￥
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="currency"/> <i class="fa fa-eur"></i>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="currency"/> Kr
-                                    </label>
-                                </div>
-
+                                <label class="radio-inline">
+                                    <input type="radio" name="currency"/> $
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="currency"/> ￥
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="currency"/> €
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="currency"/> Kr
+                                </label>
                             </div>
                             <div class="form-group">
                                 <select id="e3" style="width:100%" data-placeholder="时区">
-                                <option value=""></option>
+                                    <option value=""></option>
 
                                     <option value="1">(GMT-09:00) 阿拉斯加</option>
                                 </select>
@@ -216,21 +215,23 @@
 
         var geocoder;
         var map;
+
         function initialize() {
             geocoder = new google.maps.Geocoder();
             var latlng = new google.maps.LatLng(-34.397, 150.644);
             var mapOptions = {
                 zoom: 8,
                 center: latlng
-            }
+            };
             map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
         }
-        $("#codeAddress").click(function(){
-           codeAddress();
+
+        $("#codeAddress").click(function () {
+            codeAddress();
         });
         function codeAddress() {
             var address = document.getElementById('address').value;
-            geocoder.geocode( { 'address': address}, function(results, status) {
+            geocoder.geocode({ 'address': address}, function (results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
                     var marker = new google.maps.Marker({
@@ -238,15 +239,15 @@
                         position: results[0].geometry.location
                     });
 
-                    var location=results[0].geometry.location;
-                    var address=results[0].address_components.reverse();
+                    var location = results[0].geometry.location;
+                    var address = results[0].address_components.reverse();
 
-                    var addds="";
-                    $.each(address,function(key,val){
-                        addds+=val['long_name'];
+                    var addds = "";
+                    $.each(address, function (key, val) {
+                        addds += val['long_name'];
                     });
 
-                    alert("经纬度： "+location.toString()+" 详细地址: "+addds);
+                    alert("经纬度： " + location.toString() + " 详细地址: " + addds);
 
                 } else {
                     alert('Geocode was not successful for the following reason: ' + status);
@@ -256,8 +257,8 @@
 
         google.maps.event.addDomListener(window, 'load', initialize);
 
-/**
-        if (navigator.geolocation) {
+        /**
+         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
                 // 指示浏览器获取高精度的位置，默认为false
                 enableHighAcuracy: true,
@@ -270,7 +271,7 @@
             alert("Your browser does not support Geolocation!");
         }
 
-        function locationError(error) {
+         function locationError(error) {
             switch (error.code) {
                 case error.TIMEOUT:
                     showError("A timeout occured! Please try again!");
@@ -287,7 +288,7 @@
             }
         }
 
-        function locationSuccess(position) {
+         function locationSuccess(position) {
             var coords = position.coords;
             var latlng = new google.maps.LatLng(
                     // 维度
@@ -324,10 +325,10 @@
             infowindow.open(myMap, marker);
         }
 
-        function showError(msg) {
+         function showError(msg) {
             alert(msg);
         }
- **/
+         **/
     });
 </script>
 </body>

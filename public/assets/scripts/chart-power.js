@@ -59,9 +59,13 @@ var PowerCharts = function () {
                         trigger: 'axis'
                     },
                     legend: {
-                        data: ['8882000A10902151','8882000A10902152','8882000A10902153','8882000A10902154','8882000A10902155', '总发电量'],
+                        data: ['总发电量','8882000A10902151','8882000A10902152','8882000A10902153','8882000A10902154','8882000A10902155'],
                         x:'left',
+                        y:'bottom',
                         padding:[5,80]
+                    },
+                    grid:{
+                        y2:120
                     },
                     toolbox: {
                         show: true,
@@ -87,6 +91,7 @@ var PowerCharts = function () {
                     },
                     calculable: true,
                     dataZoom: {
+                        y:360,
                         show: false
                     },
                     xAxis: [

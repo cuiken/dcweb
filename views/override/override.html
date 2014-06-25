@@ -147,7 +147,7 @@
                     5.08 T
                 </div>
                 <div class="desc">
-                   CO2 Avoided
+                    CO2 Avoided
                 </div>
             </div>
 
@@ -156,11 +156,17 @@
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
         <div class="dashboard-stat yellow">
             <div class="visual">
-                <i class="fa fa-bar-chart-o"></i>
+                <i class="fa fa-sun-o"></i>
             </div>
             <div class="details">
                 <div class="number">
 
+                </div>
+                <div class="desc">
+                    温度 11℃~6℃
+                </div>
+                <div class="desc">
+                    风速 东风转东北风4-5级
                 </div>
                 <div class="desc">
                     Weather
@@ -176,32 +182,17 @@
 
 <div class="row ">
     <div class="col-md-12">
-        <ul class="page-breadcrumb breadcrumb">
-            <li>
-                <i class="fa fa-bar-chart-o"></i>
-                <a href="#">发电量</a>
-            </li>
 
-            <!--<li class="pull-right">-->
-                <!--<div id="dashboard-report-range" class="dashboard-date-range tooltips" data-placement="top"-->
-                     <!--data-original-title="Change date range">-->
-                    <!--<i class="fa fa-calendar"></i>-->
-								<!--<span>-->
-								<!--</span>-->
-                    <!--<i class="fa fa-angle-down"></i>-->
-                <!--</div>-->
-            <!--</li>-->
+        <ul class="nav nav-pills">
+            <li id="bydays" class="active"><a href="#">日</a></li>
+            <li id="bymonth"><a href="#">月</a></li>
+            <li id="byyear"><a href="#">年</a></li>
+            <li id="bytotal"><a href="#">总计</a></li>
         </ul>
+
         <div class="row">
-            <div class="col-md-4">
-                <ul class="nav nav-pills">
-                    <li id="bydays" class="active"><a href="#">日</a></li>
-                    <li id="bymonth"><a href="#">月</a></li>
-                    <li id="byyear"><a href="#">年</a></li>
-                    <li id="bytotal"><a href="#">总计</a></li>
-                </ul>
-            </div>
-            <div id="datepag" class="col-md-4">
+
+            <div id="datepag" class="col-md-offset-4 col-md-4">
 
             </div>
         </div>
@@ -325,7 +316,7 @@
         <div class="dataTables_paginate paging_bootstrap">
             <ul class="pagination" style="visibility: visible;">
                 <li class="prev"><a href="#" title="Prev"><i class="fa fa-angle-left"></i></a></li>
-                <li  class="active"><a href="#">1</a></li>
+                <li class="active"><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
@@ -387,8 +378,8 @@
         PowerCharts.init();
 
         var options = {
-            size:'small',
-            onSelectedDateChanged:function(event,date){
+            size: 'small',
+            onSelectedDateChanged: function (event, date) {
 //                alert('changed to '+date.toString());
             }
         };

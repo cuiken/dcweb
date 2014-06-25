@@ -143,7 +143,7 @@ var FormComponents = function () {
         $('#defaultrange').daterangepicker({
                 opens: (App.isRTL() ? 'left' : 'right'),
                 format: 'MM/DD/YYYY',
-                separator: ' to ',
+                separator: ' - ',
                 startDate: moment().subtract('days', 29),
                 endDate: moment(),
                 minDate: '01/01/2012',
@@ -751,26 +751,26 @@ var FormComponents = function () {
     return {
         //main function to initiate the module
         init: function () {
-            handleBootstrapSwitch();
-            handleBootstrapTouchSpin();
-            handleBootstrapMaxlength();
-            handleSpinners();
-            handleWysihtml5();
-            handleTagsInput();
-            handleDatePickers();
-            handleTimePickers();
-            handleDatetimePicker();
+//            handleBootstrapSwitch();
+//            handleBootstrapTouchSpin();
+//            handleBootstrapMaxlength();
+//            handleSpinners();
+//            handleWysihtml5();
+//            handleTagsInput();
+//            handleDatePickers();
+//            handleTimePickers();
+//            handleDatetimePicker();
             handleDateRangePickers();
-            handleClockfaceTimePickers();
-            handleColorPicker();
-            handleSelect2();
-            handleSelect2Modal();
-            handleInputMasks();
-            handleIPAddressInput();
-            handleMultiSelect();
-            handlePasswordStrengthChecker();
-            handleUsernameAvailabilityChecker1();
-            handleUsernameAvailabilityChecker2();
+//            handleClockfaceTimePickers();
+//            handleColorPicker();
+//            handleSelect2();
+//            handleSelect2Modal();
+//            handleInputMasks();
+//            handleIPAddressInput();
+//            handleMultiSelect();
+//            handlePasswordStrengthChecker();
+//            handleUsernameAvailabilityChecker1();
+//            handleUsernameAvailabilityChecker2();
         }
     };
 

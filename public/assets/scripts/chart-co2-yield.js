@@ -33,6 +33,9 @@ var CO2Chart = function () {
                     },
                     toolbox: {
                         show: true,
+                        orient:'vertical',
+                        x:'right',
+                        y:'center',
                         feature: {
                             mark: {show: true},
                             dataZoom: {show: true},

@@ -126,3 +126,8 @@ body.login{
         opacity:.6
     }
 }
+
+.footer .footer-tools {
+     float: none;
+    display: inline-block;
+}

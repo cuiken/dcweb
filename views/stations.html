@@ -22,7 +22,6 @@
     <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
 
-    <link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
     <!-- BEGIN THEME STYLES -->
     <link href="/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
@@ -34,44 +33,7 @@
     <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico"/>
-    <style>
 
-        .portfolio-info span {
-            font-size: 14px;
-        }
-
-        .portfolio-info {
-            padding: 10px;
-        }
-
-        .row.portfolio-block {
-            cursor: pointer;
-            position: relative;
-        }
-
-        .row.portfolio-block:hover {
-            background: #f1f1f1;
-        }
-
-        .share_station {
-            position: absolute;
-            right: 25px;
-            top: 5px;
-        }
-
-        .remove_station {
-            position: absolute;
-            right: 25px;
-            top: 5px;
-        }
-
-        .portfolio-block .portfolio-text{
-            padding: 0;
-        }
-        .portfolio-block .portfolio-stat{
-            padding: 0;
-        }
-    </style>
 </head>
 <body class="page-header-fixed">
 <%- include header.html %>
@@ -91,153 +53,59 @@
                     </h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="add-portfolio">
-											<span>
-												立刻创建属于您的电站，即可享受我们给您提供的服务。
-											</span>
-                        <a href="/station/create" class="btn icn-only green">Add a new Station <i
-                                class="m-icon-swapright m-icon-white"></i></a>
-                    </div>
-                </div>
-            </div>
-<!--
-            <div class="col-md-12">
-            <div class="row portfolio-block">
-                <div class="col-md-3  portfolio-text">
-                    <img class="img-rounded" src="http://solarcloud.zeversolar.com/res/def/icon/plant04.jpg" alt="">
 
-                    <div class="portfolio-text-info">
-                        <h4>Demo Plant</h4>
-                    </div>
-                </div>
-                <div class="col-md-9 portfolio-stat">
-                    <div class="portfolio-info">
-                        E-Today
-											<span>
-                                                0.72KWh
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        E-Total
-											<span>
-                                                6.62MWh
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        总收益
-											<span>
-                                                <i class="fa fa-dollar"></i>3131.87
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        CO2减排量
-											<span>
-                                                5.01T
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        逆变器
-											<span>
-                                                1/2
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        监控器
-											<span>
-                                                1/1
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        数据更新时间
-											<span>
-                                                2014-06-04 09:16:47
-											</span>
-                    </div>
-                </div>
-                <i class="share_station fa fa-group"></i>
-
-            </div>
-            <div class="row portfolio-block">
-                <div class="col-md-3  portfolio-text">
-
-                    <img class="img-rounded" src="http://solarcloud.zeversolar.com/res/def/icon/plant01.jpg" alt="">
-
-                    <div class="portfolio-text-info">
-                        <h4>应用测试12</h4>
-                    </div>
-
-                </div>
-                <div class="col-md-9 portfolio-stat">
-                    <div class="portfolio-info">
-                        E-Today
-											<span>
-                                                0.0KWh
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        E-Total
-											<span>
-                                                20.83MWh
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        总收益
-											<span>
-                                                $14578.87
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        CO2减排量
-											<span>
-                                                15.01T
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        逆变器
-											<span>
-                                                0/12
-											</span>
-                    </div>
-                    <div class="portfolio-info">
-                        监控器
-											<span>
-                                                0/1
-											</span>
-                    </div>
-
-                    <div class="portfolio-info">
-                        数据更新时间
-											<span>
-                                                2014-03-04 08:16:47
-											</span>
-                    </div>
-                </div>
-                <i class="remove_station fa fa-times-circle"></i>
-
-            </div>
-            </div>
--->
             <div class="row">
                 <div class="col-md-12">
                     <!-- BEGIN INLINE NOTIFICATIONS PORTLET-->
                     <div class="portlet">
-                        <!--<div class="portlet-title">-->
-                            <!--<div class="caption">-->
-                                <!--<i class="fa fa-cogs"></i>Pricing Tables-->
-                            <!--</div>-->
-                            <!--<div class="tools">-->
-                                <!--<a href="javascript:;" class="collapse"></a>-->
-                                <!--<a href="#portlet-config" data-toggle="modal" class="config"></a>-->
-                                <!--<a href="javascript:;" class="reload"></a>-->
-                                <!--<a href="javascript:;" class="remove"></a>-->
-                            <!--</div>-->
-                        <!--</div>-->
+
                         <div class="portlet-body">
                             <div class="row margin-bottom-40">
                                 <!-- Pricing -->
-                                <div class="col-md-3">
+                                <div class="col-lg-3 col-md-4">
+                                    <div class="pricing hover-effect">
+                                        <div class="pricing-head">
+                                            <h3> New Plant</h3>
+                                            <div style="text-align: left;float: left">
+                                                <img class="img-rounded" src="http://solarcloud.zeversolar.com/res/def/icon/plant01.jpg" alt="new plant">
+                                            </div>
+                                            <h4>
+
+                                                0<i>.00</i><i>KWH</i>
+											<span>
+												E-Today
+											</span>
+
+                                            </h4>
+                                        </div>
+                                        <ul class="pricing-content list-unstyled">
+                                            <li>
+                                                <i class="fa fa-tags"></i> E-Total <i>0.00MWH</i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-asterisk"></i> 总收益  <i class="fa fa-dollar">0.00</i>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-heart"></i> CO2减排量 0.00T
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star"></i> 逆变器 0
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-shopping-cart"></i> 监控器 0
+                                            </li>
+                                        </ul>
+                                        <div class="pricing-footer">
+                                            <p>
+                                                数据更新时间 N/n
+                                            </p>
+                                            <a href="#" class="btn green">
+                                                Add <i class="m-icon-swapright m-icon-white"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4">
                                     <div class="pricing hover-effect">
                                         <div class="pricing-head">
                                             <h3>Demo plant</h3>
@@ -279,7 +147,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3 col-md-4">
                                     <div class="pricing hover-effect">
                                         <div class="pricing-head">
                                             <h3>Demo plant</h3>
@@ -321,7 +189,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3 col-md-4">
                                     <div class="pricing hover-effect">
                                         <div class="pricing-head">
                                             <h3>Demo plant</h3>
@@ -363,7 +231,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-lg-3 col-md-4">
                                     <div class="pricing hover-effect">
                                         <div class="pricing-head">
                                             <h3>Demo plant</h3>
