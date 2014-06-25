@@ -52,71 +52,109 @@
                     </h3>
                 </div>
             </div>
-            <div class="row" style="margin-bottom: 20px;">
+            <div class="row">
                 <div class="col-md-12">
-                    <form class="form-inline" action="">
-                        <div class="form-group">
-                            <label class="control-label">国家</label>
-                            <!--<div class="controls">-->
-                            <select class="form-control">
-                                <option value="all">All</option>
-                            </select>
-                            <!--</div>-->
 
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-search"></i>查询
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse"></a>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label">类型</label>
-                            <select class="form-control">
-                                <option value="all">All</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">查看状态</label>
-                            <select class="form-control">
-                                <option value="all">All</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">设备</label>
-                            <select class="form-control">
-                                <option value="all">All</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">型号</label>
-                            <select class="form-control">
-                                <option value="all">All</option>
-                            </select>
-                        </div>
+                        <div class="portlet-body">
+                            <form class="form-horizontal" action="">
 
-                        <div class="form-group">
-                            <label class="control-label">错误代码</label>
-                            <input class="form-control" type="text"/>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">类型</label>
+                                        <div class="col-md-8">
+                                            <select class="form-control">
+                                                <option value="all">All</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">查看状态</label>
+                                        <div class="col-md-8">
+                                            <select class="form-control">
+                                                <option value="all">All</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">错误代码</label>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">电站名</label>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">设备</label>
+                                        <div class="col-md-8">
+                                            <select class="form-control">
+                                                <option value="all">All</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">型号</label>
+                                        <div class="col-md-8">
+                                            <select class="form-control">
+                                                <option value="all">All</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">日期</label>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="date"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">国家</label>
+                                        <div class="col-md-8">
+                                            <select class="form-control">
+                                                <option value="all">All</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">描述</label>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">SN</label>
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <button class="btn btn-primary" href="">查询</button>
+                                    </div>
+                                </div>
+
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label">描述</label>
-                            <input class="form-control" type="text"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">SN</label>
-                            <input class="form-control" type="text"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">日期</label>
-                            <input class="form-control" type="date"/> -
-                            <input class="form-control" type="date"/>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">电站名</label>
-                            <input class="form-control" type="text"/>
-                        </div>
-                        <button class="btn btn-primary" href="">查询</button>
-                    </form>
+                    </div>
                 </div>
             </div>
             <div class="row margin-bottom-10 pull-right">
                 <div class="col-md-12">
-                    <button class="btn">导出</button>
+                    <button class="btn btn-default"><i class="fa fa-download"></i> 导出</button>
                 </div>
             </div>
             <div class="row">
