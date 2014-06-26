@@ -45,7 +45,7 @@ var CO2Chart = function () {
                             saveAsImage: {show: true},
                             csv : {
                                 show : true,
-                                title : 'CSV',
+                                title : 'TXT',
                                 icon : 'image://../assets/img/avatar.png',
                                 onclick : function(){
                                     alert('myToolHandler')

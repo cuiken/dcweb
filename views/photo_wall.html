@@ -79,6 +79,14 @@
         :-webkit-full-screen .tohide {
             display: block;
         }
+        .thumbnail {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            max-width: 310px;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body class="page-header-fixed">
@@ -99,53 +107,109 @@
                     </h3>
                 </div>
             </div>
-            <div id="fs" class="pull-right">
-                <button class="btn" id="slide-fs"><i class="fa fa-arrows-alt"></i> fullscreen</button>
+            <div id="fs" class="pull-right margin-bottom-10">
+                <!--<a class="btn btn-primary" href="/photoWall-input"><i class="fa fa-plus"></i> 新增</a>-->
+                <button class="btn btn-default" id="slide-fs"><i class="fa fa-arrows-alt"></i> Fullscreen(快捷键F) </button>
             </div>
             <div class="clearfix"></div>
-            <div class="fullwidthbanner-container slider-main">
-            <div class="fullwidthabnner">
-            <ul id="revolutionul" style="display:none;">
-            <!-- THE FIRST SLIDE -->
-            <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400"
-                data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
-                <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-                <img src="assets/img/sliders/revolution/bg1.jpg" alt="">
-
-                <div class="caption lfb"
-                     data-x="640"
-                     data-y="55"
-                     data-speed="700"
-                     data-start="1000"
-                     data-easing="easeOutExpo">
-                    <img src="assets/img/sliders/revolution/man-winner.png" alt="Image 1">
-                </div>
-            </li>
-
-                <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400"
-                    data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
-                    <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-                    <img src="assets/img/sliders/revolution/bg1.jpg" alt="">
-
-                    <div class="caption lfb"
-                         data-x="640"
-                         data-y="55"
-                         data-speed="700"
-                         data-start="1000"
-                         data-easing="easeOutExpo">
-                        <img src="assets/img/sliders/revolution/lady.png" alt="Image 1">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 ">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="http://static.bootcss.com/www/assets/img/codeguide.png" alt=""/>
+                        </a>
+                        <div class="caption">
+                            <p>发电量概述</p>
+                            <button class="btn btn-primary">修改</button>
+                            <button class="btn btn-default">删除</button>
+                        </div>
                     </div>
-                </li>
-            <li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="700" data-delay="9400"
-                data-thumb="assets/img/sliders/revolution/thumbs/thumb4.jpg">
-                <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-                <img src="assets/img/sliders/revolution/bg-goodssolutions.jpg" alt="">
+                </div>
+                <div class="col-sm-6 col-md-6 ">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="http://static.bootcss.com/www/assets/img/gruntjs.png" alt=""/>
+                        </a>
+                        <div class="caption">
+                            <p>图表</p>
+                            <button class="btn btn-primary">修改</button>
+                            <button class="btn btn-default">删除</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 ">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="http://static.bootcss.com/www/assets/img/codeguide.png" alt=""/>
+                        </a>
+                        <div class="caption">
+                            <p>
+                                fd
+                            </p>
+                            <button class="btn btn-primary">修改</button>
+                            <button class="btn btn-default">删除</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 ">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="http://static.bootcss.com/www/assets/img/gruntjs.png" alt=""/>
+                        </a>
+                        <div class="caption">
+                            <p>fd</p>
+                            <button class="btn btn-primary">修改</button>
+                            <button class="btn btn-default">删除</button>
+                        </div>
+                    </div>
+                </div>
 
-
-            </li>
-            </ul>
-            <div class="tp-bannertimer tp-bottom"></div>
             </div>
+
+            <div class="clearfix"></div>
+            <div class="fullwidthbanner-container slider-main" style="height: 470px !important;">
+                <div class="fullwidthabnner">
+                    <ul id="revolutionul" style="display:none;">
+                        <!-- THE FIRST SLIDE -->
+                        <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400"
+                            data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
+                            <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                            <img src="assets/img/sliders/revolution/bg1.jpg" alt="">
+
+                            <div class="caption lfb"
+                                 data-x="640"
+                                 data-y="55"
+                                 data-speed="700"
+                                 data-start="1000"
+                                 data-easing="easeOutExpo">
+                                <img src="assets/img/sliders/revolution/man-winner.png" alt="Image 1">
+                            </div>
+                        </li>
+                        <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400"
+                            data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
+                            <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                            <img src="assets/img/sliders/revolution/bg1.jpg" alt="">
+
+                            <div class="caption lfb"
+                                 data-x="640"
+                                 data-y="55"
+                                 data-speed="700"
+                                 data-start="1000"
+                                 data-easing="easeOutExpo">
+                                <img src="assets/img/sliders/revolution/lady.png" alt="Image 1">
+                            </div>
+                        </li>
+                        <li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="700"
+                            data-delay="9400"
+                            data-thumb="assets/img/sliders/revolution/thumbs/thumb4.jpg">
+                            <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                            <img src="assets/img/sliders/revolution/bg-goodssolutions.jpg" alt="">
+
+
+                        </li>
+                    </ul>
+                    <div class="tp-bannertimer tp-bottom"></div>
+                </div>
             </div>
 
         </div>
@@ -190,6 +254,10 @@
                 case 13: // ENTER. ESC should also take you out of fullscreen by default.
                     e.preventDefault();
                     document.cancelFullScreen();
+                    break;
+                case 70:
+                    e.preventDefault();
+                    enterFullscreen(document.querySelector('.fullwidthabnner'));
                     break;
             }
         }, false);
@@ -238,7 +306,7 @@
 
                     thumbWidth: 100,                         // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
                     thumbHeight: 50,
-                    thumbAmount: 5,
+                    thumbAmount: 3,
 
                     navigationType: "thumb",                // bullet, thumb, none
                     navigationArrows: "solo",                // nexttobullets, solo (old name verticalcentered), none
@@ -271,10 +339,9 @@
                     hideAllCaptionAtLilmit: 0,				// Hide all The Captions if Width of Browser is less then this value
                     hideSliderAtLimit: 0,					// Hide the whole slider, and stop also functions if Width of Browser is less than this value
 
-                    shadow: 1,                               //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows  (No Shadow in Fullwidth Version !)
-                    fullWidth: "on"   ,                       // Turns On or Off the Fullwidth Image Centering in FullWidth Modus
-
-                    fullScreen:"on"
+                    shadow: 3,                               //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows  (No Shadow in Fullwidth Version !)
+                    fullWidth: "off",                       // Turns On or Off the Fullwidth Image Centering in FullWidth Modus
+                    fullScreen: "on"
                 });
     });
 </script>

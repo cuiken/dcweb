@@ -69,6 +69,9 @@ module.exports = function (app) {
     app.get('/photoWall', function (req, res) {
         res.render('photo_wall');
     });
+    app.get('/photoWall-input', function (req, res) {
+        res.render('photowall_input');
+    });
 
     app.get('/config/equip', function (req, res) {
         res.render('config/equip');
