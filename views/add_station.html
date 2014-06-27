@@ -44,6 +44,36 @@
     <div class="page-content-wrapper">
         <div class="page-content">
 
+            <div class="modal fade" id="GoogleMap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">Google Map</h4>
+                        </div>
+                        <div class="modal-body" style="padding:0;">
+                            <div id="pvc_map" style="height:400px;"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="text-align:left;">
+                                        <div class="input-group" style="margin-bottom:0;">
+                                            <input  class="form-control" type="text" id="map-address" style="width:320px;"/>
+                                            <button class="btn btn-primary" type="button" id="map-search">Search</button>
+                                        </div>
+                                        <span id="map-lat" style="display:none;"></span>
+                                        <span id="map-long" style="display:none;"></span>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        <a href="#" class="btn btn-default" id="map-ok">Save changes</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="page-title">
@@ -101,6 +131,12 @@
                                 <label class="control-label visible-ie8 visible-ie9">预装机容量</label>
                                 <input class="form-control placeholder-no-fix" placeholder="预装机容量 KW" type="text"/>
                             </div>
+
+                            <div class="pull-right" id="GoogleMapPopup">
+                                <a href="#GoogleMap"  data-toggle="modal"><i class="fa fa-globe fa-2x"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+
                             <div class="form-group"><label class="control-label visible-ie8 visible-ie9">国家</label>
                                 <select id="e2" style="width:100%" data-placeholder="选择国家">
                                     <option value=""></option>
@@ -122,7 +158,7 @@
 
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="城市"/>
+                                <input class="form-control" type="text" id="City" value="苏州" placeholder="城市"/>
                             </div>
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="街道/门牌号"/>
@@ -131,10 +167,10 @@
                                 <input class="form-control" type="text" placeholder="邮编"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="经度"/>
+                                <input class="form-control" type="text" id="long" placeholder="经度"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="纬度"/>
+                                <input class="form-control" type="text" id="lat" placeholder="纬度"/>
                             </div>
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="海拔"/>
@@ -148,25 +184,7 @@
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="收益系数"/>
                             </div>
-                            <div class="pull-right" id="map">
-                                <a href="#mapview"><i class="fa fa-globe"></i> Map</a>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div style="display: none" id="mapview">
-                                <div class="form-group">
-                                    <div class="input-group" id="panel">
-                                        <input class="form-control" id="address" type="textbox"
-                                               value="Egensevej 194 Storvorde" placeholder="your address">
 
-                                        <div class="input-group-btn">
-                                            <input class="btn" id="codeAddress" type="button" value="定位">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div id="map-canvas" style="height: 400px;width: auto;"></div>
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <label class="control-label">货币单位</label>
                                 <div>
@@ -246,55 +264,181 @@
         $("#e2").select2();
         $("#e3").select2();
         $("#e4").select2();
-        $("#map").click(function(){
+//        $("#map").click(function(){
+//
+//           $("#mapview").slideToggle();
+//        });
+//        var geocoder;
+//        var map;
+//
+//        function initialize() {
+//            geocoder = new google.maps.Geocoder();
+//            var latlng = new google.maps.LatLng(-34.397, 150.644);
+//            var mapOptions = {
+//                zoom: 8,
+//                center: latlng
+//            };
+//            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+//        }
+//
+//        $("#codeAddress").click(function () {
+//            codeAddress();
+//        });
+//        function codeAddress() {
+//            var address = document.getElementById('address').value;
+//            geocoder.geocode({ 'address': address}, function (results, status) {
+//                if (status == google.maps.GeocoderStatus.OK) {
+//                    map.setCenter(results[0].geometry.location);
+//                    var marker = new google.maps.Marker({
+//                        map: map,
+//                        position: results[0].geometry.location
+//                    });
+//
+//                    var location = results[0].geometry.location;
+//                    var address = results[0].address_components.reverse();
+//
+//                    var addds = "";
+//                    $.each(address, function (key, val) {
+//                        addds += val['long_name'];
+//                    });
+//
+//                    alert("经纬度： " + location.toString() + " 详细地址: " + addds);
+//
+//                } else {
+//                    alert('Geocode was not successful for the following reason: ' + status);
+//                }
+//            });
+//        }
+//
+//        google.maps.event.addDomListener(document.getElementById("map"), 'click', initialize);
 
-           $("#mapview").slideToggle();
+       var google_map = {
+            map: null,
+            marker: null,
+            elevator: null,
+            min_zoom: 2,
+            max_zoom: 6,
+            default_zoom_level: 6,
+            default_address_level: 1,
+//            crosshair: new google.maps.MarkerImage(
+//                    '../../../images/crosshairs.png',
+//                    new google.maps.Size(25, 25),
+//                    new google.maps.Point(0, 0),
+//                    new google.maps.Point(12, 12)
+//            ),
+            geocoder: new google.maps.Geocoder(),
+            round_coordinate: function (coord) {
+                coord = coord * 100000;
+                coord = Math.round(coord);
+                coord = coord / 100000;
+                return coord;
+            },
+            show_altitude: function (latlon) {
+                this.elevator = new google.maps.ElevationService();
+                var locations = [], positionalRequest;
+                locations.push(latlon);
+                positionalRequest = {
+                    'locations': locations
+                };
+                this.elevator.getElevationForLocations(positionalRequest, function (results, status) {
+                    if (status === google.maps.ElevationStatus.OK) {
+                        // Retrieve the first result
+                        if (results[0]) {
+                            $("#map-alt").text(Math.round(results[0].elevation));
+                        }
+                    }
+                });
+            },
+            show_location: function (location, zoom_level) {
+                var elem = this, latLng;
+                latLng = new google.maps.LatLng(location.lat(), location.lng());
+                this.geocoder.geocode({'latLng': latLng}, function (results, status) {
+                    $('#map-address').val(results[elem.default_address_level].formatted_address);
+                });
+                $("#map-lat").text(this.round_coordinate(location.lat()));
+                $("#map-long").text(this.round_coordinate(location.lng()));
+                this.marker.setPosition(location);
+                this.map.setCenter(location);
+                this.map.setZoom(zoom_level);
+                this.show_altitude(location);
+            },
+            geocode_address: function (search_address) {
+                var elem = this;
+                this.geocoder.geocode({'address': search_address}, function (results, status) {
+                    if (status === "OK") {
+                        elem.show_location(results[0].geometry.location, elem.default_zoom_level);
+                    } else {
+                        $("#map-address").val(status);
+                    }
+                });
+                return;
+            }
+        };
+
+        $('#GoogleMapPopup').click(function () {
+            if (google_map.map === null) {
+                google_map.map = new google.maps.Map(document.getElementById("pvc_map"), {
+                    zoom: 2,
+                    center: new google.maps.LatLng(20, 70),
+                    minZoom: google_map.min_zoom,
+                    //maxZoom: google_map.max_zoom,
+                    streetViewControl: true,
+                    panControl : false,
+                    zoomControl: true,
+                    zoomControlOptions: {
+                        style: google.maps.ZoomControlStyle.SMALL
+                    },
+                    style: google.maps.ZoomControlStyle.SMALL,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP //HYBRID
+                });
+
+                // add click listener to place markers on the map
+                google.maps.event.addListener(google_map.map, 'click', function (event) {
+                    google_map.show_location(event.latLng, google_map.map.getZoom());
+                });
+
+                // add listener to the end of dragging marker
+                google.maps.event.addListener(google_map.map, "dragend", function () {
+                    google_map.show_location(google_map.map.getCenter(), google_map.map.getZoom());
+                });
+
+                google_map.marker = new google.maps.Marker({
+                    map: google_map.map,
+                    draggable: true,
+                    icon: google_map.crosshair
+                });
+
+//                google.maps.event.addListener(google_map.marker, 'drag', function(event) {
+//                    console.debug('new position is '+event.latLng.lat()+' / '+event.latLng.lng());
+//                });
+
+                google.maps.event.addListener(google_map.marker, 'dragend', function(event) {
+                    console.debug('final position is '+event.latLng.lat()+' / '+event.latLng.lng());
+                    google_map.show_location(event.latLng, google_map.map.getZoom());
+                });
+            }
+
+            var search_address = $("#City").val();
+            if (search_address.length > 0) {
+                google_map.geocode_address(search_address);
+            }
+
+            $('#GoogleMap').modal('show');
+            //$('#GoogleMap').css('width', '660px').css('margin-left','-330px');
         });
-        var geocoder;
-        var map;
 
-        function initialize() {
-            geocoder = new google.maps.Geocoder();
-            var latlng = new google.maps.LatLng(-34.397, 150.644);
-            var mapOptions = {
-                zoom: 8,
-                center: latlng
-            };
-            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        }
-
-        $("#codeAddress").click(function () {
-            codeAddress();
+        $('#map-search').click(function () {
+            var search_address = $("#map-address").val();
+            if (search_address.length > 0) {
+                google_map.geocode_address(search_address);
+            }
         });
-        function codeAddress() {
-            var address = document.getElementById('address').value;
-            geocoder.geocode({ 'address': address}, function (results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: results[0].geometry.location
-                    });
-
-                    var location = results[0].geometry.location;
-                    var address = results[0].address_components.reverse();
-
-                    var addds = "";
-                    $.each(address, function (key, val) {
-                        addds += val['long_name'];
-                    });
-
-                    alert("经纬度： " + location.toString() + " 详细地址: " + addds);
-
-                } else {
-                    alert('Geocode was not successful for the following reason: ' + status);
-                }
-            });
-        }
-
-        google.maps.event.addDomListener(document.getElementById("map"), 'click', initialize);
-
-
+        $('#map-ok').click(function () {
+            $('#City').val($('#map-address').val());
+            $('#lat').val($('#map-lat').text());
+            $('#long').val($('#map-long').text());
+            $('#GoogleMap').modal('hide');
+        });
     });
 </script>
 </body>
