@@ -137,28 +137,29 @@
                             </div>
                             <div class="clearfix"></div>
 
-                            <div class="form-group"><label class="control-label visible-ie8 visible-ie9">国家</label>
-                                <select id="e2" style="width:100%" data-placeholder="选择国家">
-                                    <option value=""></option>
-                                    <optgroup label="Asia">
-                                        <option value="">China</option>
-                                    </optgroup>
-                                    <optgroup label="South America">
-                                        <option value="">America</option>
-                                    </optgroup>
+                            <!--<div class="form-group"><label class="control-label visible-ie8 visible-ie9">国家</label>-->
+                                <!--<select id="e2" style="width:100%" data-placeholder="选择国家">-->
+                                    <!--<option value=""></option>-->
+                                    <!--<optgroup label="Asia">-->
+                                        <!--<option value="">China</option>-->
+                                    <!--</optgroup>-->
+                                    <!--<optgroup label="South America">-->
+                                        <!--<option value="">America</option>-->
+                                    <!--</optgroup>-->
 
-                                </select>
+                                <!--</select>-->
 
-                            </div>
-                            <div class="form-group"><label class="control-label visible-ie8 visible-ie9">州/省</label>
-                                <select id="e4" style="width:100%" data-placeholder="选择州/省">
-                                    <option value=""></option>
+                            <!--</div>-->
+                            <!--<div class="form-group"><label class="control-label visible-ie8 visible-ie9">州/省</label>-->
+                                <!--<select id="e4" style="width:100%" data-placeholder="选择州/省">-->
+                                    <!--<option value=""></option>-->
 
-                                </select>
+                                <!--</select>-->
 
-                            </div>
+                            <!--</div>-->
                             <div class="form-group">
                                 <input class="form-control" type="text" id="City" value="苏州" placeholder="城市"/>
+
                             </div>
                             <div class="form-group">
                                 <input class="form-control" type="text" placeholder="街道/门牌号"/>
@@ -237,6 +238,7 @@
 <script src="/assets/plugins/respond.min.js"></script>
 <script src="/assets/plugins/excanvas.min.js"></script>
 <![endif]-->
+<script src="/assets/plugins/pace.min.js"></script>
 <script src="/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 
@@ -244,13 +246,12 @@
 <script src="/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"
         type="text/javascript"></script>
 
-<script src="/assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<!--<script src="/assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>-->
 <script src="/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 
 <script src="/assets/plugins/select2/select2.min.js"></script>
-<script src="/assets/plugins/pace.min.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.9"></script>
 <script src="/assets/scripts/app.js" type="text/javascript"></script>
 
 <script>
@@ -264,53 +265,7 @@
         $("#e2").select2();
         $("#e3").select2();
         $("#e4").select2();
-//        $("#map").click(function(){
-//
-//           $("#mapview").slideToggle();
-//        });
-//        var geocoder;
-//        var map;
-//
-//        function initialize() {
-//            geocoder = new google.maps.Geocoder();
-//            var latlng = new google.maps.LatLng(-34.397, 150.644);
-//            var mapOptions = {
-//                zoom: 8,
-//                center: latlng
-//            };
-//            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-//        }
-//
-//        $("#codeAddress").click(function () {
-//            codeAddress();
-//        });
-//        function codeAddress() {
-//            var address = document.getElementById('address').value;
-//            geocoder.geocode({ 'address': address}, function (results, status) {
-//                if (status == google.maps.GeocoderStatus.OK) {
-//                    map.setCenter(results[0].geometry.location);
-//                    var marker = new google.maps.Marker({
-//                        map: map,
-//                        position: results[0].geometry.location
-//                    });
-//
-//                    var location = results[0].geometry.location;
-//                    var address = results[0].address_components.reverse();
-//
-//                    var addds = "";
-//                    $.each(address, function (key, val) {
-//                        addds += val['long_name'];
-//                    });
-//
-//                    alert("经纬度： " + location.toString() + " 详细地址: " + addds);
-//
-//                } else {
-//                    alert('Geocode was not successful for the following reason: ' + status);
-//                }
-//            });
-//        }
-//
-//        google.maps.event.addDomListener(document.getElementById("map"), 'click', initialize);
+
 
        var google_map = {
             map: null,
@@ -413,7 +368,7 @@
 //                });
 
                 google.maps.event.addListener(google_map.marker, 'dragend', function(event) {
-                    console.debug('final position is '+event.latLng.lat()+' / '+event.latLng.lng());
+//                    console.debug('final position is '+event.latLng.lat()+' / '+event.latLng.lng());
                     google_map.show_location(event.latLng, google_map.map.getZoom());
                 });
             }
@@ -423,8 +378,6 @@
                 google_map.geocode_address(search_address);
             }
 
-            $('#GoogleMap').modal('show');
-            //$('#GoogleMap').css('width', '660px').css('margin-left','-330px');
         });
 
         $('#map-search').click(function () {
