@@ -1,8 +1,11 @@
 /**
+ * Created by Ken.Cui on 2014/7/3.
+ */
+/**
  * Created by Ken.Cui on 2014/6/23.
  */
 
-var IpvChart = function () {
+var AcChart = function () {
 
     return{
         init: function () {
@@ -60,8 +63,8 @@ var IpvChart = function () {
                     legend: {
                         orient:'horizontal',
                         data: ['B983000A137Q0037_1', 'B983000A137Q0037_2','B983000A137Q0037_3','B983000A137Q0037_4','B983000A137Q0037_5',
-                        'B983000A137Q0037_6','B983000A137Q0037_7','B983000A137Q0037_8','B983000A137Q0037_9','B983000A137Q0038_0','B983000A137Q0038_1',
-                        'B983000A137Q0038_2','B983000A137Q0038_3','B983000A137Q0038_4','B983000A137Q0038_5'],
+                            'B983000A137Q0037_6','B983000A137Q0037_7','B983000A137Q0037_8','B983000A137Q0037_9','B983000A137Q0038_0','B983000A137Q0038_1',
+                            'B983000A137Q0038_2','B983000A137Q0038_3','B983000A137Q0038_4','B983000A137Q0038_5'],
                         y:'bottom',
                         x:'left',
                         padding:[0,40],
@@ -126,7 +129,7 @@ var IpvChart = function () {
                     yAxis: [
                         {
                             type: 'value',
-                            name: 'ipv',
+                            name: 'fac',
                             axisLabel: {
                                 formatter: '{value} A'
                             },

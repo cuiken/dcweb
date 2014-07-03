@@ -20,7 +20,7 @@
     <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/plugins/jcrop/css/jquery.Jcrop.min.css" rel="stylesheet"/>
-    <link href="/assets/plugins/select2/select2.css" rel="stylesheet"/>
+    <!--<link href="/assets/plugins/select2/select2.css" rel="stylesheet"/>-->
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN THEME STYLES -->
@@ -92,44 +92,36 @@
                             <h3>设备信息</h3>
 
                             <div class="form-group">
-                                <label class="control-label visible-ie8 visible-ie9">序列号</label>
+                                <label class="control-label">序列号</label>
 
                                 <!--<div class="input-icon">-->
                                 <!--<i class="fa fa-lock"></i>-->
-                                <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                                       id="psno"
-                                       placeholder="序列号" name="psno"/>
+                                <input class="form-control" type="text" autocomplete="off" id="psno" name="psno"/>
                                 <!--</div>-->
                             </div>
                             <div class="form-group">
-                                <label class="control-label visible-ie8 visible-ie9">注册码</label>
+                                <label class="control-label">注册码</label>
 
                                 <!--<div class="input-icon">-->
                                 <!--<i class="fa fa-lock"></i>-->
-                                <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                                       id="registno"
-                                       placeholder="注册码" name="registno"/>
+                                <input class="form-control" type="text" autocomplete="off" id="registno" name="registno"/>
                                 <!--</div>-->
                             </div>
                             <h3>电站信息</h3>
 
                             <div class="form-group">
-                                <label class="control-label visible-ie8 visible-ie9">电站名称</label>
+                                <label class="control-label">电站名称</label>
 
-                                <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                                       id="stationname"
-                                       placeholder="电站名称" name="stationname"/>
+                                <input class="form-control" type="text" autocomplete="off" id="stationname" name="stationname"/>
                             </div>
                             <div class="form-group">
-                                <label class="control-label visible-ie8 visible-ie9">公司名称</label>
-                                <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                                       id="company"
-                                       placeholder="公司名称" name="company"/>
+                                <label class="control-label">公司名称</label>
+                                <input class="form-control" type="text" autocomplete="off" id="company"  name="company"/>
                             </div>
                             <div class="form-group">
 
-                                <label class="control-label visible-ie8 visible-ie9">预装机容量</label>
-                                <input class="form-control placeholder-no-fix" placeholder="预装机容量 KW" type="text"/>
+                                <label class="control-label">预装机容量</label>
+                                <input class="form-control"  type="text"/>
                             </div>
 
                             <div class="pull-right" id="GoogleMapPopup">
@@ -158,32 +150,41 @@
 
                             <!--</div>-->
                             <div class="form-group">
-                                <input class="form-control" type="text" id="City" value="苏州" placeholder="城市"/>
+                                <label class="control-label">城市</label>
+                                <input class="form-control" type="text" id="City" value="苏州"/>
 
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="街道/门牌号"/>
+                                <label class="control-label">街道/门牌号</label>
+                                <input class="form-control" type="text"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="邮编"/>
+                                <label class="control-label">邮编</label>
+                                <input class="form-control" type="text"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" id="long" placeholder="经度"/>
+                                <label class="control-label">经度</label>
+                                <input class="form-control" type="text" id="long"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" id="lat" placeholder="纬度"/>
+                                <label class="control-label">纬度</label>
+                                <input class="form-control" type="text" id="lat"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="海拔"/>
+                                <label class="control-label">海拔</label>
+                                <input class="form-control" type="text"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="倾斜角"/>
+                                <label class="control-label">倾斜角</label>
+                                <input class="form-control" type="text"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="CO2减排系数"/>
+                                <label class="control-label">CO2减排系数</label>
+                                <input class="form-control" type="text"/>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="收益系数"/>
+                                <label class="control-label">收益系数</label>
+                                <input class="form-control" type="text"/>
                             </div>
 
                             <div class="form-group">
@@ -205,15 +206,13 @@
 
                             </div>
                             <div class="form-group">
-                                <select id="e3" style="width:100%" data-placeholder="时区">
-                                    <option value=""></option>
-
+                                <label class="control-label ">时区</label>
+                                <select class="form-control">
                                     <option value="1">(GMT-09:00) 阿拉斯加</option>
                                 </select>
                             </div>
                             <div class="form-actions">
-                                <button type="reset" class="btn btn-default">Reset</button>
-                                &nbsp;
+
                                 <button type="submit" class="btn icn-only green">
                                     Submit <i class="m-icon-swapright m-icon-white"></i>
                                 </button>
@@ -250,7 +249,7 @@
 <!--<script src="/assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>-->
 <script src="/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 
-<script src="/assets/plugins/select2/select2.min.js"></script>
+<!--<script src="/assets/plugins/select2/select2.min.js"></script>-->
 
 <script src="/assets/plugins/jcrop/js/jquery.color.js"></script>
 <script src="/assets/plugins/jcrop/js/jquery.Jcrop.min.js"></script>
@@ -264,11 +263,6 @@
         $("#powerlist").addClass('active');
         $("#powerlist > a > span.arrow").removeClass().addClass('selected');
         $("#powerlist > .sub-menu > li:nth-child(2)").addClass('active');
-
-        $("#e2").select2();
-        $("#e3").select2();
-        $("#e4").select2();
-
 
        var google_map = {
             map: null,

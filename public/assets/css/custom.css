@@ -18,9 +18,6 @@ body{
     display: block;
 }
 
-.signup .content .form-actions{
-    line-height: 2.5;
-}
 body.login{
     background: #fbfbfb !important;
 }
