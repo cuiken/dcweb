@@ -22,7 +22,7 @@
     <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
 
-    <link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
+    <!--<link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>-->
     <!-- BEGIN THEME STYLES -->
     <link href="/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
@@ -46,15 +46,15 @@
     </style>
 </head>
 <body class="page-header-fixed">
-<%- include header.html %>
+<%- include ../header.html %>
 <div class="clearfix">
 </div>
 <div class="page-container">
-    <%- include left_menu.html %>
+    <%- include ../left_menu.html %>
 
     <div class="page-content-wrapper">
         <div class="page-content">
-            <%- include theme_panel.html %>
+            <%- include ../theme_panel.html %>
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="page-title">
@@ -63,6 +63,10 @@
                     </h3>
                 </div>
             </div>
+            <div id="fs" class="pull-right margin-bottom-10">
+                <a class="btn btn-default" href="/photoWall"><i class="fa fa-reply"></i> 返回</a>
+            </div>
+            <div class="clearfix"></div>
             <div class="row">
                 <div class="col-sm-6 col-md-6 ">
                     <div class="thumbnail">
@@ -70,9 +74,9 @@
                             <img src="http://static.bootcss.com/www/assets/img/codeguide.png" alt=""/>
                         </a>
                         <div class="caption">
-                            <p>发电量概述</p>
-                            <button class="btn btn-primary">修改</button>
-                            <button class="btn btn-default">删除</button>
+                            <p>发电量</p>
+                            <button class="btn btn-default"><i class="fa fa-history"></i> 恢复默认</button>
+                            <button class="btn btn-primary"><i class="fa fa-pencil"></i> 修改</button>
                         </div>
                     </div>
                 </div>
@@ -83,8 +87,8 @@
                         </a>
                         <div class="caption">
                             <p>图表</p>
-                            <button class="btn btn-primary">修改</button>
-                            <button class="btn btn-default">删除</button>
+                            <button class="btn btn-default"><i class="fa fa-history"></i> 恢复默认</button>
+                            <button class="btn btn-primary"><i class="fa fa-pencil"></i> 修改</button>
                         </div>
                     </div>
                 </div>
@@ -95,10 +99,10 @@
                         </a>
                         <div class="caption">
                             <p>
-                                fd
+                                p3
                             </p>
-                            <button class="btn btn-primary">修改</button>
-                            <button class="btn btn-default">删除</button>
+                            <button class="btn btn-default"><i class="fa fa-history"></i> 恢复默认</button>
+                            <button class="btn btn-primary"><i class="fa fa-pencil"></i> 修改</button>
                         </div>
                     </div>
                 </div>
@@ -108,9 +112,9 @@
                             <img src="http://static.bootcss.com/www/assets/img/gruntjs.png" alt=""/>
                         </a>
                         <div class="caption">
-                            <p>fd</p>
-                            <button class="btn btn-primary">修改</button>
-                            <button class="btn btn-default">删除</button>
+                            <p>p4</p>
+                            <button class="btn btn-default"><i class="fa fa-history"></i> 恢复默认</button>
+                            <button class="btn btn-primary"><i class="fa fa-pencil"></i> 修改</button>
                         </div>
                     </div>
                 </div>
@@ -119,7 +123,7 @@
         </div>
     </div>
 </div>
-<%- include footer.html %>
+<%- include ../footer.html %>
 <!--[if lt IE 9]>
 <script src="/assets/plugins/respond.min.js"></script>
 <script src="/assets/plugins/excanvas.min.js"></script>
@@ -141,9 +145,9 @@
     jQuery(document).ready(function () {
         App.init();
 
-        $("#photowall").addClass('active');
-        $("#photowall > a > span.arrow").removeClass().addClass('selected');
-        $("#photowall > .sub-menu > li:nth-child(1)").addClass('active');
+        $("#override").addClass('active');
+        $("#override > a > span.arrow").removeClass().addClass('selected');
+        $("#override > .sub-menu > li:nth-child(1)").addClass('active');
 
     });
 </script>

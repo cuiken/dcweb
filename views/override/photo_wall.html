@@ -64,41 +64,18 @@
             -webkit-transition: none;
         }
 
-        pre:-webkit-full-screen {
-            background-color: white;
-        }
-
-        pre:-webkit-full-screen:after {
-            content: 'Only one element can be targeted for full screen';
-        }
-
-        .tohide {
-            display: none;
-        }
-
-        :-webkit-full-screen .tohide {
-            display: block;
-        }
-        .thumbnail {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            max-width: 310px;
-            margin-bottom: 30px;
-        }
     </style>
 </head>
 <body class="page-header-fixed">
-<%- include header.html %>
+<%- include ../header.html %>
 <div class="clearfix">
 </div>
 <div class="page-container">
-    <%- include left_menu.html %>
+    <%- include ../left_menu.html %>
 
     <div class="page-content-wrapper">
         <div class="page-content">
-            <%- include theme_panel.html %>
+            <%- include ../theme_panel.html %>
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="page-title">
@@ -162,7 +139,7 @@
         </div>
     </div>
 </div>
-<%- include footer.html %>
+<%- include ../footer.html %>
 <!--[if lt IE 9]>
 <script src="/assets/plugins/respond.min.js"></script>
 <script src="/assets/plugins/excanvas.min.js"></script>
@@ -189,9 +166,9 @@
     jQuery(document).ready(function () {
         App.init();
 
-        $("#photowall").addClass('active');
-        $("#photowall > a > span.arrow").removeClass().addClass('selected');
-        $("#photowall > .sub-menu > li:nth-child(1)").addClass('active');
+        $("#override").addClass('active');
+        $("#override > a > span.arrow").removeClass().addClass('selected');
+        $("#override > .sub-menu > li:nth-child(1)").addClass('active');
 
 
         document.cancelFullScreen = document.webkitCancelFullScreen || document.mozCancelFullScreen || document.msExitFullscreen || document.exitFullscreen;

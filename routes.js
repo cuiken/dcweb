@@ -67,10 +67,10 @@ module.exports = function (app) {
         res.render('add_station');
     });
     app.get('/photoWall', function (req, res) {
-        res.render('photo_wall');
+        res.render('override/photo_wall');
     });
     app.get('/photoWall-input', function (req, res) {
-        res.render('photowall_input');
+        res.render('override/photowall_input');
     });
 
     app.get('/config/equip', function (req, res) {
