@@ -39,7 +39,7 @@
 
     <div class="page-content-wrapper">
         <div class="page-content">
-            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="eq-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -94,7 +94,66 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
-            <%- include ../theme_panel.html %>
+
+            <div class="modal fade" id="eq-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">设置</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="tab-content">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#tab_1_1" data-toggle="tab">修改别名</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#tab_1_2" data-toggle="tab">删除设备</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-pane active" id="tab_1_1">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label class="control-label">序列号:</label>
+                                            <div>
+                                                EA8989113053
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">旧别名:</label>
+                                            <div>EA8989113053</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">新别名:</label>
+                                            <div>
+                                                <input type="text" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-default">确定</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane" id="tab_1_2">
+                                    <div class="form-group">
+                                        <lable class="control-label">注册码:</lable>
+                                        <div>
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-default">删除</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="page-title">
@@ -109,9 +168,8 @@
                         <div class="form-group"><input class="form-control" type="text" placeholder="序列号"/></div>
                         <div class="form-group"><input class="form-control" type="text" placeholder="注册码"/></div>
                         &nbsp;
-                        <button class="btn btn-primary" href="">添加监控器</button>
-                        &nbsp;
-                        <button class="btn btn-default" href="">删除监控器</button>
+                        <button class="btn btn-default" href="">添加监控器</button>
+
                     </form>
                     <div style="margin-top: 20px;">
                         <table class="table table-striped table-bordered table-hover">
@@ -124,34 +182,32 @@
                                     <th>下载数据</th>
                                     <!--<th>设置</th>-->
                                     <!--<th>属性</th>-->
-                                    <th>操作</th>
+                                    <th>设置</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><img src="http://solarcloud.zeversolar.com/images/pum.gif" alt=""/></td>
-                                    <td><a href="#portlet-config" data-toggle="modal">EA8989113053</a></td>
+                                    <td><a href="#eq-detail" data-toggle="modal">EA8989113053</a></td>
                                     <td>EA8989113053</td>
                                     <td>PMU</td>
                                     <td> <a href="#"><i class="fa fa-download"></i></a></td>
                                     <!--<td></td>-->
                                     <!--<td></td>-->
                                     <td>
-                                        <a href="#"><i class="fa fa-cog"></i></a>&nbsp;&nbsp;
-                                        <a href="#"><i class="fa fa-times-circle"></i></a>
+                                        <a href="#eq-config" data-toggle="modal"><i class="fa fa-cog"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><img src="http://solarcloud.zeversolar.com/images/dev1.gif" alt=""/></td>
-                                    <td><a href="#portlet-config" data-toggle="modal">8882000A10902151</a></td>
+                                    <td><a href="#eq-detail" data-toggle="modal">8882000A10902151</a></td>
                                     <td>8882000A10902151</td>
                                     <td>TL2000</td>
                                     <td> <a href="#"><i class="fa fa-download"></i></a></td>
                                     <!--<td></td>-->
                                     <!--<td></td>-->
                                     <td>
-                                        <a href="#"><i class="fa fa-cog"></i></a>&nbsp;&nbsp;
-                                        <a href="#"><i class="fa fa-times-circle"></i></a>
+                                        <a href="#eq-config" data-toggle="modal"><i class="fa fa-cog"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
