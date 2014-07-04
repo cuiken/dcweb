@@ -95,40 +95,93 @@
                 <div class="fullwidthabnner">
                     <ul id="revolutionul" style="display:none;">
                         <!-- THE FIRST SLIDE -->
-                        <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400"
+                        <li data-transition="slideleft" data-slotamount="8" data-masterspeed="700" data-delay="9400"
                             data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
                             <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
                             <img src="assets/img/sliders/revolution/bg1.jpg" alt="">
 
                             <div class="caption lfb"
-                                 data-x="640"
+                                 data-x="440"
                                  data-y="55"
                                  data-speed="700"
                                  data-start="1000"
                                  data-easing="easeOutExpo">
-                                <img src="assets/img/sliders/revolution/man-winner.png" alt="Image 1">
+
+                                <div style="width: 400px;">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span class="badge"> 1.59 KWh</span>
+                                            E-Today
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="badge"> 10.0 KWh</span>
+                                            E-Month
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="badge"> 6.39 MWh</span>
+                                            E-Total
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="badge">$ 3192</span>
+                                            InCome
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="badge">5.11 T</span>
+                                            CO2 Avoided
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </li>
-                        <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400"
+                        <li data-transition="slideleft" data-slotamount="8" data-masterspeed="700" data-delay="9400"
                             data-thumb="assets/img/sliders/revolution/thumbs/thumb3.jpg">
                             <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
                             <img src="assets/img/sliders/revolution/bg1.jpg" alt="">
 
                             <div class="caption lfb"
-                                 data-x="640"
-                                 data-y="55"
+                                 data-x="440"
+                                 data-y="0"
                                  data-speed="700"
                                  data-start="1000"
                                  data-easing="easeOutExpo">
-                                <img src="assets/img/sliders/revolution/lady.png" alt="Image 1">
+
+                                <div id="chart" style="height: 400px;width: 500px">
+
+                                </div>
                             </div>
                         </li>
-                        <li data-transition="3dcurtain-vertical" data-slotamount="10" data-masterspeed="700"
+                        <li data-transition="slideleft" data-slotamount="10" data-masterspeed="700"
                             data-delay="9400"
                             data-thumb="assets/img/sliders/revolution/thumbs/thumb4.jpg">
                             <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
-                            <img src="assets/img/sliders/revolution/bg-goodssolutions.jpg" alt="">
+                            <img src="assets/img/sliders/revolution/bg2.jpg" alt="">
+                            <div class="caption lfb"
+                                 data-x="440"
+                                 data-y="0"
+                                 data-speed="700"
+                                 data-start="1000"
+                                 data-easing="easeOutExpo">
+                                <div id="linechart" style="height: 400px;width: 500px"></div>
 
+                            </div>
+
+                        </li>
+                        <li data-transition="slideleft" data-slotamount="10" data-masterspeed="700"
+                            data-delay="9400"
+                            data-thumb="assets/img/sliders/revolution/thumbs/thumb4.jpg">
+                            <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                            <img src="assets/img/sliders/revolution/bg1.jpg" alt="">
+
+                            <div class="caption lfb"
+                                 data-x="440"
+                                 data-y="0"
+                                 data-speed="700"
+                                 data-start="1000"
+                                 data-easing="easeOutExpo">
+                                <div id="barchart" style="height: 400px;width: 500px"></div>
+
+                            </div>
 
                         </li>
                     </ul>
@@ -159,7 +212,7 @@
         src="/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins-4.1.min.js"></script>
 <script type="text/javascript"
         src="/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution-4.1.min.js"></script>
-
+<script src="/assets/plugins/echarts/echarts-plain.js"></script>
 <script src="/assets/scripts/app.js" type="text/javascript"></script>
 
 <script>
@@ -223,14 +276,14 @@
         jQuery('.fullwidthabnner').revolution(
                 {
                     delay: 2000,
-                    startheight: 380,
+                    startheight: 580,
                     startwidth: 1150,
 
                     hideThumbs: 10,
 
                     thumbWidth: 100,                         // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
                     thumbHeight: 50,
-                    thumbAmount: 3,
+                    thumbAmount: 4,
 
                     navigationType: "thumb",                // bullet, thumb, none
                     navigationArrows: "solo",                // nexttobullets, solo (old name verticalcentered), none
@@ -267,6 +320,97 @@
                     fullWidth: "off",                       // Turns On or Off the Fullwidth Image Centering in FullWidth Modus
                     fullScreen: "on"
                 });
+
+        var myChart = echarts.init(document.getElementById('chart'));
+        var lineChart = echarts.init(document.getElementById('linechart'));
+        var barChart = echarts.init(document.getElementById('barchart'));
+
+        $(".page-content").resize(function(){
+
+            myChart.resize();
+        });
+       var option = {
+            tooltip : {
+                formatter: "{a} <br/>{b} : {c}KW"
+            },
+            series : [
+                {
+                    type:'gauge',
+                    detail : {formatter:'{value}KW'},
+                    data:[{value: 50, name: 'Power'}]
+                }
+            ]
+        };
+        var timeTicket;
+        clearInterval(timeTicket);
+        timeTicket = setInterval(function (){
+            option.series[0].data[0].value = (Math.random()*100).toFixed(2) - 0;
+            myChart.setOption(option, true);
+        },2000);
+
+        myChart.setOption(option);
+
+
+        var lineoption = {
+
+
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : ['周一','周二','周三','周四','周五','周六','周日']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} KW'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name:'最高气温',
+                    type:'line',
+                    data:[2, 11, 15, 5, 12, 13, 10]
+
+                }
+            ]
+        };
+
+        lineChart.setOption(lineoption);
+
+
+       var  baroption = {
+
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} KWh'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name:'蒸发量',
+                    type:'bar',
+                    data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+
+                }
+            ]
+        };
+
+        barChart.setOption(baroption);
     });
 </script>
 
