@@ -132,3 +132,14 @@ body.login{
 .fa-2x {
     font-size: 2em !important;
 }
+
+#warning_info {
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    padding: 8px 35px 8px 14px;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+}
