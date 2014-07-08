@@ -3,6 +3,7 @@
  */
 var urllib = require('urllib');
 var config = require('./config');
+var moment = require('moment');
 
 module.exports = function (app) {
     app.get('/', function (req, res) {
@@ -107,4 +108,23 @@ module.exports = function (app) {
             res.json(data);
         });
     });
-}
+    app.get('/heatmap/datas-years.json', function (req, res, next) {
+
+        var todaySec = moment() / 1000;
+        var d0707 = moment('2014-07-07') / 1000;
+        var d0606 = moment('2014-06-06') / 1000;
+        var d0101 = moment('2014-01-01') / 1000;
+        var d0523 = moment('2014-05-23') / 1000;
+        var d0225 = moment('2014-02-25') / 1000;
+
+        var ds = {};
+        ds[todaySec] = 2.05;
+        ds[d0101] = 40;
+        ds[d0523] = 60;
+        ds[d0606] = 80;
+        ds[d0707] = 10;
+        ds[d0225] = 120;
+
+        res.json(ds);
+    });
+};

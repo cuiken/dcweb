@@ -232,7 +232,19 @@
 <div class="row margin-bottom-10 ">
     <div class="col-md-12">
         <button class="btn btn-primary"><i class="fa fa-plus"></i> 新增</button>
+        <div class="btn-group">
+            <button class="btn btn-danger"><i class="fa fa-shield"></i> 更新策略</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">更新选中</a></li>
 
+                <li class="divider"></li>
+                <li><a href="#">更新全部</a></li>
+            </ul>
+        </div>
         <div class="btn-group">
             <button type="button" class="btn btn-warning"><i class="fa fa-exchange"></i> 升级</button>
             <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
@@ -247,23 +259,9 @@
                 <li><a href="#">重启</a></li>
             </ul>
         </div>
-        <div class="btn-group">
-            <button class="btn btn-danger"><i class="fa fa-shield"></i> 更新策略</button>
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">更新选中</a></li>
-
-                <li class="divider"></li>
-                <li><a href="#">更新全部</a></li>
-            </ul>
-        </div>
 
         <div class="pull-right">
             <button class="btn btn-default"><i class="fa fa-download"></i> CSV</button>
-            <button class="btn btn-default"><i class="fa fa-download"></i> TXT</button>
         </div>
     </div>
 </div>
