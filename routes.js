@@ -29,6 +29,9 @@ module.exports = function (app) {
     app.get('/events', function (req, res) {
         res.render('override/events');
     });
+    app.get('/override-cal',function(req,res){
+       res.render('override/override-cal');
+    });
 
     app.get('/forgot-password', function (req, res) {
         res.render('forgot-password');

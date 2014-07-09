@@ -871,8 +871,8 @@ var CalHeatMap = function() {
 
 						self.tooltip.attr("style",
 							"display: block; " +
-							"left: " + (self.positionSubDomainX(d.t) - self.tooltip[0][0].offsetWidth/2 + options.cellSize/2 + parseInt(domainNode.getAttribute("x"), 10)) + "px; " +
-							"top: " + (self.positionSubDomainY(d.t) - self.tooltip[0][0].offsetHeight - options.cellSize/2 + parseInt(domainNode.getAttribute("y"), 10)) + "px;")
+							"left: " + (self.positionSubDomainX(d.t) - self.tooltip[0][0].offsetWidth/2 + options.cellSize/2 + parseInt(domainNode.getAttribute("x"), 10)+120) + "px; " +
+							"top: " + (self.positionSubDomainY(d.t) - self.tooltip[0][0].offsetHeight - options.cellSize/2 + parseInt(domainNode.getAttribute("y"), 10)+8) + "px;")
 						;
 					});
 
