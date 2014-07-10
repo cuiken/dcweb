@@ -99,6 +99,9 @@ module.exports = function (app) {
     app.get('/admin/users', function (req, res) {
         res.render('admin/userList');
     });
+    app.get('/admin/connect',function(req,res){
+        res.render('admin/connect');
+    });
 
     app.get('/powerInfo/:period/:date', function (req, res, next) {
         var period = req.params.period;

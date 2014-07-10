@@ -1,0 +1,157 @@
+<!doctype html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <title>Stations | Solar Cloud - Zever Solar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <meta name="MobileOptimized" content="320">
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/bootstrap-switch/static/stylesheets/bootstrap-switch-metro.css" rel="stylesheet"
+          type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN THEME STYLES -->
+    <link href="/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="/assets/css/pages/profile.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
+
+    <script src="/assets/plugins/pace.min.js"></script>
+</head>
+<body class="page-header-fixed">
+<%- include ../header.html %>
+<div class="clearfix">
+</div>
+
+<div class="page-container">
+    <%- include ../left_menu.html %>
+    <div class="page-content-wrapper">
+        <div class="page-content">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="page-title">
+                        电站连接示意图
+                        <small></small>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <canvas id="connect" width="900" style="border:1px solid #ccc;"></canvas>
+                    <canvas id="main" style="width:900px;height:500px;border:1px solid #ccc"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ../footer.html %>
+<!--[if lt IE 9]>
+<script src="/assets/plugins/respond.min.js"></script>
+<script src="/assets/plugins/excanvas.min.js"></script>
+<![endif]-->
+
+<script src="/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-10/esl.js"></script>
+
+<script src="/assets/scripts/app.js" type="text/javascript"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init();
+
+        var fileLocation = '/assets/plugins/zrender/zrender';
+        require.config({
+            paths:{
+                zrender: fileLocation,
+                'zrender/shape/Circle': fileLocation,
+                'zrender/shape/Text': fileLocation,
+                'zrender/shape/BrokenLine': fileLocation
+            }
+        });
+
+        var canvas = document.getElementById("connect");
+
+        if (canvas.getContext) {
+
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.moveTo(20, 50);
+            ctx.lineTo(60, 50);
+            ctx.lineTo(60, 90);
+            ctx.lineTo(100, 90);
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.moveTo(20,120);
+            ctx.lineTo(100,120);
+            ctx.strokeStyle = "red";
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.fillStyle = "#2E81CE";
+            ctx.strokeStyle = "red";
+            ctx.lineWidth = 2;
+            ctx.fillRect(150, 10, 100, 120);
+            ctx.strokeRect(150, 10, 100, 120);
+
+
+            ctx.beginPath();
+            ctx.fillStyle = "#92B901";
+            ctx.strokeStyle = "green";
+            ctx.lineWidth = 2;
+            ctx.fillRect(310, 10, 120, 120);
+            ctx.strokeRect(310, 10, 120, 120);
+            ctx.closePath();
+
+
+            var img=new Image();
+            var url=img.src="/assets/img/eg_flower.png";
+
+            preImage(url,function(){
+                ctx.drawImage(this,500,10);
+            });
+
+            function preImage(url,callback){
+                var img = new Image();
+                img.src = url;
+
+                if (img.complete) {
+                    callback.call(img);
+                    return;
+                }
+
+                img.onload = function () {
+                    callback.call(img);
+                };
+            }
+        }
+
+    });
+</script>
+</body>
+</html>
