@@ -54,8 +54,8 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <canvas id="connect" width="900" style="border:1px solid #ccc;"></canvas>
-                    <canvas id="main" style="width:900px;height:500px;border:1px solid #ccc"></canvas>
+                    <!--<canvas id="connect" width="900" style="border:1px solid #ccc;"></canvas>-->
+                    <div id="main" style="width:900px;height:500px;"></div>
                 </div>
             </div>
         </div>
@@ -71,29 +71,281 @@
 <script src="/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 <script src="/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"
+        type="text/javascript"></script>
 <script src="/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 <script src="/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-10/esl.js"></script>
 
 <script src="/assets/scripts/app.js" type="text/javascript"></script>
 <script>
+var fileLocation = '/assets/plugins/zrender/zrender';
+require.config({
+    paths: {
+        zrender: fileLocation,
+        'zrender/shape/Circle': fileLocation,
+        'zrender/shape/Text': fileLocation,
+        'zrender/shape/BrokenLine': fileLocation,
+        'zrender/shape/Line': fileLocation,
+        'zrender/shape/Image': fileLocation,
+        'zrender/shape/Rectangle': fileLocation
+    }
+});
+
+require(
+        [
+            'zrender',
+            'zrender/shape/Circle',
+            'zrender/shape/Line',
+            'zrender/shape/BrokenLine',
+            'zrender/shape/Rectangle',
+            'zrender/shape/Text',
+            'zrender/shape/Image'
+        ],
+        function (zrender) {
+            var zr = zrender.init(document.getElementById('main'));
+            var color = require('zrender/tool/color');
+            var colorIdx = 0;
+            var width = Math.ceil(zr.getWidth());
+            var height = Math.ceil(zr.getHeight());
+
+
+            var n = document.createElement('canvas').getContext ? 150 : 50;
+
+            var CircleShape = require('zrender/shape/Circle');
+
+            var RectangleShape = require('zrender/shape/Rectangle');
+
+            var LineShape = require('zrender/shape/Line');
+
+            var BrokenLineShape = require('zrender/shape/BrokenLine');
+
+            var TextShape = require('zrender/shape/Text');
+            var ImageShape = require('zrender/shape/Image');
+
+            zr.addShape(new LineShape({
+                style: {
+                    xStart: 190,
+                    yStart: 260,
+                    xEnd: 450,
+                    yEnd: 260,
+                    strokeColor: color.getColor(colorIdx++),
+                    lineWidth: 2,
+                    lineType: 'dashed',    // default solid
+                    text: 'X',
+                    textPosition: 'inside'
+                }
+            }));
+
+            zr.addShape(new LineShape({
+                style: {
+                    xStart: 600,
+                    yStart: 260,
+                    xEnd: 850,
+                    yEnd: 260,
+                    strokeColor: color.getColor(colorIdx++),
+                    lineWidth: 2,
+                    text: '220V',
+                    textPosition: 'top'
+                }
+            }));
+
+            // 折线1
+            zr.addShape(new BrokenLineShape({
+                style: {
+                    pointList: [
+                        [190, 130],
+                        [310, 130],
+                        [310, 230],
+                        [450, 230]
+                    ],
+                    strokeColor: color.getColor(colorIdx),
+                    lineWidth: 3,
+                    text: '254V/16A',
+                    textPosition: 'top'
+                }
+            }));
+
+            // 折线2
+            zr.addShape(new BrokenLineShape({
+                style: {
+                    pointList: [
+                        [190, 390],
+                        [310, 390],
+                        [310, 290],
+                        [450, 290]
+                    ],
+                    strokeColor: color.getColor(colorIdx),
+                    lineWidth: 3,
+                    text: '224V/10A',
+                    textPosition: 'bottom'
+                }
+            }));
+
+            // 电池板1
+            zr.addShape(new RectangleShape({
+                style: {
+                    x: 40,
+                    y: 80,
+                    width: 150,
+                    height: 100,
+//                        radius: [20, 50],
+                    brushType: 'both',
+                    color: color.getColor(++colorIdx),
+                    strokeColor: color.getColor(colorIdx),
+//                        lineWidth : 15,
+                    lineJoin: 'round',
+                    text: '电池板1',
+                    textPosition: 'inside'
+                },
+                clickable: true,
+                onclick: function () {
+                    alert('click!');
+                    return true;
+                }
+            }));
+            // 电池板2
+            zr.addShape(new RectangleShape({
+                style: {
+                    x: 40,
+                    y: 210,
+                    width: 150,
+                    height: 100,
+                    brushType: 'both',
+                    color: color.getColor(colorIdx),
+                    strokeColor: color.getColor(colorIdx),
+                    lineJoin: 'round',
+                    text: '电池板2',
+                    textPosition: 'inside'
+                }
+            }));
+            // 电池板3
+            zr.addShape(new RectangleShape({
+                style: {
+                    x: 40,
+                    y: 340,
+                    width: 150,
+                    height: 100,
+                    brushType: 'both',
+                    color: color.getColor(colorIdx++),
+                    strokeColor: color.getColor(colorIdx++),
+                    lineJoin: 'round',
+                    text: '电池板3',
+                    textPosition: 'inside'
+                }
+            }));
+
+            // 逆变器
+            zr.addShape(new RectangleShape({
+                style: {
+                    x: width - 450,
+                    y: 180,
+                    width: 150,
+                    height: 150,
+//                        radius: [20, 50],
+                    brushType: 'both',
+                    color: color.getColor(colorIdx++),
+                    strokeColor: color.getColor(colorIdx++),
+//                        lineWidth : 15,
+                    lineJoin: 'round',
+                    text: '逆变器',
+                    textPosition: 'inside'
+                }
+            }));
+
+            // 文本
+            zr.addShape(new TextShape({
+                style: {
+                    x: width / 2,
+                    y: 10,
+                    brushType: 'fill',
+                    color: color.getColor(colorIdx++),
+                    shadowColor: 'yellow',
+                    shadowBlur: 10,
+                    lineWidth: 3,
+                    text: 'Demo',
+                    textFont: 'normal 50px verdana',
+                    textAlign: 'center',
+                    textBaseline: 'top'
+                },
+                draggable: true
+            }));
+
+
+            // 图片
+            zr.addShape(new ImageShape({
+                style: {
+                    x: 650,
+                    y: 0,
+                    image: "/assets/img/eg_flower.png",
+                    width: 224,
+                    height: 162
+                },
+                draggable: true
+            }));
+
+            var width = zr.getWidth();
+            var height = zr.getHeight() - 30;
+            var shapList = [];
+            var n = 3;
+            var CircleShape = require('zrender/shape/Circle');
+            for (var i = 0; i < n; i++) {
+                shapList.push(new CircleShape({
+                    id: require('zrender/tool/guid')(),
+                    style: {
+                        x: 190, y: 130, r: 4,
+                        color: _getRandomColor()
+                    }
+                }));
+            }
+            function _getRandomColor() {
+                return 'rgba(' + Math.round(Math.random() * 256) + ',' + Math.round(Math.random() * 256) + ',' + Math.round(Math.random() * 256) + ', 0.8)'
+            }
+
+            var easingEffect = [
+                'Linear',
+                'QuadraticIn', 'QuadraticOut', 'QuadraticInOut',
+                'CubicIn', 'CubicOut', 'CubicInOut',
+                'QuarticIn', 'QuarticOut', 'QuarticInOut',
+                'QuinticIn', 'QuinticOut', 'QuinticInOut'
+            ]
+            for (var i = 0; i < n; i++) {
+                zr.addShape(shapList[i]);
+                zr.animate(shapList[i].id, "style", true)
+
+                        .when(2000, {
+                            x: 310,
+                            y: 130
+                        })
+                        .when(4000, {
+                            x: 310,
+                            y: 230
+                        })
+                        .when(6000, {
+                            x: 450,
+                            y: 230
+                        })
+                        .start(easingEffect[i]);
+            }
+
+
+            zr.render();
+        }
+);
+</script>
+<script>
     jQuery(document).ready(function () {
         App.init();
 
-        var fileLocation = '/assets/plugins/zrender/zrender';
-        require.config({
-            paths:{
-                zrender: fileLocation,
-                'zrender/shape/Circle': fileLocation,
-                'zrender/shape/Text': fileLocation,
-                'zrender/shape/BrokenLine': fileLocation
-            }
-        });
+        $("#admin").addClass('active');
+        $("#admin > a > span.arrow").removeClass().addClass('selected');
+        $("#admin > .sub-menu > li:nth-child(9)").addClass('active');
 
-        var canvas = document.getElementById("connect");
 
-        if (canvas.getContext) {
+        /**
+         var canvas = document.getElementById("connect");
+
+         if (canvas.getContext) {
 
             var ctx = canvas.getContext("2d");
             ctx.beginPath();
@@ -150,7 +402,7 @@
                 };
             }
         }
-
+         **/
     });
 </script>
 </body>
