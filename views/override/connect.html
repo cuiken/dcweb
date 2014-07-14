@@ -200,7 +200,7 @@ require(
                 },
                 clickable: true,
                 onclick: function () {
-                    alert('click!');
+                    alert('detail!');
                     return true;
                 }
             }));
@@ -254,35 +254,39 @@ require(
             }));
 
             // 文本
-            zr.addShape(new TextShape({
-                style: {
-                    x: width / 2,
-                    y: 10,
-                    brushType: 'fill',
-                    color: color.getColor(colorIdx++),
-                    shadowColor: 'yellow',
-                    shadowBlur: 10,
-                    lineWidth: 3,
-                    text: 'Demo',
-                    textFont: 'normal 50px verdana',
-                    textAlign: 'center',
-                    textBaseline: 'top'
-                },
-                draggable: true
-            }));
+//            zr.addShape(new TextShape({
+//                style: {
+//                    x: width / 2,
+//                    y: 10,
+//                    brushType: 'both',
+//                    color : color.getLinearGradient(
+//                            0, 70, 0, 110,
+//                            [[0, '#c7ffbb'],[1,'#00afdd']]
+//                    ),
+//                    strokeColor : '#ffff77',
+//                    lineWidth : 2,
+//                    shadowBlur: 15,
+//                    shadowColor : 'rgba(255,215,0,0.8)',
+//                    text: 'Demo',
+//                    textFont: 'normal 50px verdana',
+//                    textAlign: 'center',
+//                    textBaseline: 'top'
+//                },
+//                draggable: true
+//            }));
 
 
             // 图片
-            zr.addShape(new ImageShape({
-                style: {
-                    x: 650,
-                    y: 0,
-                    image: "/assets/img/eg_flower.png",
-                    width: 224,
-                    height: 162
-                },
-                draggable: true
-            }));
+//            zr.addShape(new ImageShape({
+//                style: {
+//                    x: 650,
+//                    y: 0,
+//                    image: "/assets/img/eg_flower.png",
+//                    width: 224,
+//                    height: 162
+//                },
+//                draggable: true
+//            }));
 
             var width = zr.getWidth();
             var height = zr.getHeight() - 30;
@@ -337,9 +341,9 @@ require(
     jQuery(document).ready(function () {
         App.init();
 
-        $("#admin").addClass('active');
-        $("#admin > a > span.arrow").removeClass().addClass('selected');
-        $("#admin > .sub-menu > li:nth-child(9)").addClass('active');
+        $("#override").addClass('active');
+        $("#override > a > span.arrow").removeClass().addClass('selected');
+        $("#override > .sub-menu > li:nth-child(2)").addClass('active');
 
 
         /**

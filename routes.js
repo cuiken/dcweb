@@ -32,6 +32,9 @@ module.exports = function (app) {
     app.get('/override-cal',function(req,res){
        res.render('override/override-cal');
     });
+    app.get('/connect',function(req,res){
+        res.render('override/connect');
+    });
 
     app.get('/forgot-password', function (req, res) {
         res.render('forgot-password');
@@ -98,9 +101,6 @@ module.exports = function (app) {
     });
     app.get('/admin/users', function (req, res) {
         res.render('admin/userList');
-    });
-    app.get('/admin/connect',function(req,res){
-        res.render('admin/connect');
     });
 
     app.get('/powerInfo/:period/:date', function (req, res, next) {
