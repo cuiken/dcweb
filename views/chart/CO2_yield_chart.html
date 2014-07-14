@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
 <head>
     <meta charset="utf-8"/>
     <title>Solar Cloud - Zever Solar</title>
@@ -137,8 +143,8 @@
         CO2Chart.init();
 
         var options = {
-            size:'small',
-            onSelectedDateChanged:function(event,date){
+            size: 'small',
+            onSelectedDateChanged: function (event, date) {
 //                alert('changed to '+date.toString());
             }
         };

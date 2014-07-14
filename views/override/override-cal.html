@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8"/>
@@ -22,7 +25,7 @@
     <link href="/assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css"/>
     <!--<link href="/assets/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>-->
-    <link href="/assets/plugins/cal-heatmap/css/cal-heatmap.css" rel="stylesheet" />
+    <link href="/assets/plugins/cal-heatmap/css/cal-heatmap.css" rel="stylesheet"/>
     <!-- END PAGE LEVEL PLUGIN STYLES -->
 
     <!-- BEGIN THEME STYLES -->
@@ -398,7 +401,7 @@
         cal.init({itemSelector: "#heatmap",
             domain: "month",
             subDomain: "day",
-            data:'/heatmap/datas-years.json',
+            data: '/heatmap/datas-years.json',
             verticalOrientation: true,
             legendHorizontalPosition: "right",
             rowLimit: 1,
@@ -414,16 +417,16 @@
             },
             cellSize: 15,
             cellPadding: 5,
-            start:new Date(2014,0),
+            start: new Date(2014, 0),
             tooltip: true,
 
             itemName: ["KWh", "KWh"],
             domainLabelFormat: "%m",
-            subDomainDateFormat: function(date) {
+            subDomainDateFormat: function (date) {
                 return moment(date).format("LL"); // Use the moment library to format the Date
             },
-            onClick: function(date, nb) {
-                alert(date + " with " +  (nb === null ? "unknown" : nb) + " KWh");
+            onClick: function (date, nb) {
+                alert(date + " with " + (nb === null ? "unknown" : nb) + " KWh");
             }
 
         });
