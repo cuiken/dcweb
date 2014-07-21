@@ -56,14 +56,12 @@
             padding-bottom: 20px;
             padding-top: 20px;
         }
-        .explore-nav-wrap{
-            padding: 0 0 20px;
-        }
+
         .explore-nav-wrap li{
             width: 80px;
             margin-right: 20px;
         }
-        #mobile {
+        .mobile {
             width: 900px;
             background: #fff;
             -moz-border-radius: 4px;
@@ -71,10 +69,14 @@
             border-radius: 4px;
             padding: 27px 0 8px;
         }
-        #mobile .device {
-            background: #fff url("http://s.srcdd.com/img/element/mobile-android-bg.png?v=3") no-repeat scroll 30px 0;
+        .mobile .device {
+            background: #fff url("/assets/img/app/mobile-android-bg.png") no-repeat scroll 30px 0;
             position: relative;
             height: 553px;
+        }
+
+        .device.iphone{
+            background: #fff url('/assets/img/app/mobile-iphone-bg.png') no-repeat scroll 30px 0;
         }
         .introduction {
             width: 450px;
@@ -110,9 +112,12 @@
         .download-button {
             width: 122px;
             height: 52px;
-            background: #fff url("http://s.srcdd.com/img/element/mobile-download-buttons-v2.$6435.png") no-repeat scroll 0 0;
+            background: #fff url("/assets/img/app/mobile-download-buttons.png") no-repeat scroll 0 0;
             display: block;
             text-indent: -9999em;
+        }
+        .iphone .download-button{
+            background: #fff url("/assets/img/app/mobile-download-buttons.png") no-repeat scroll 0 0;
         }
     </style>
 </head>
@@ -126,30 +131,55 @@
 <div class="page-container">
     <div class="container">
         <div id="content">
-            <div class="explore-nav-wrap">
-                <ul class="nav nav-pills">
-                    <li class="active"><a href="#">iPhone</a></li>
-                    <li><a href="#">Android</a></li>
+            <div class="tabbable tabbable-custom tabbable-full-width">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_1" data-toggle="tab">Android</a></li>
+                    <li><a href="#tab_2" data-toggle="tab">iPhone</a></li>
                 </ul>
-            </div>
-            <div id="mobile">
-                <div class="device android">
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="tab_1">
+                        <div class="mobile">
+                            <div class="device android">
 
-                    <div class="introduction">
-                        <h1 class="page-title">SolarCloud &nbsp;Android 客户端</h1>
-                        <ul class="feature-list">
-                            <li class="feature-item">- 最极致的阅读体验</li>
-                            <li class="feature-item">- 最极致的阅读体验,发达发大水发生发生的</li>
-                            <li class="feature-item">- 最极致的阅读体验，发生的撒旦</li>
-                        </ul>
-                        <a class="download-button" target="_blank" href="#" title="立即下载">立即下载</a>
-                        <div class="qr-holder">
-                            <h3 class="title">直接使用二维码下载</h3>
-                            <img class="code" alt="QR Code" width="87" height="87" src="http://s.srcdd.com/img/element/android-qr-code.$6435.jpg">
+                                <div class="introduction">
+                                    <h1 class="page-title">SolarCloud &nbsp;Android 客户端</h1>
+                                    <ul class="feature-list">
+                                        <li class="feature-item">- 最极致的阅读体验</li>
+                                        <li class="feature-item">- 最极致的阅读体验,发达发大水发生发生的</li>
+                                        <li class="feature-item">- 最极致的阅读体验，发生的撒旦</li>
+                                    </ul>
+                                    <a class="download-button" target="_blank" href="#" title="立即下载">立即下载</a>
+                                    <div class="qr-holder">
+                                        <h3 class="title">直接使用二维码下载</h3>
+                                        <img class="code" alt="QR Code" width="87" height="87" src="/assets/img/app/android-qr-code.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="tab_2">
+                        <div class="mobile">
+                            <div class="device iphone">
+
+                                <div class="introduction">
+                                    <h1 class="page-title">SolarCloud &nbsp;iPhone 客户端</h1>
+                                    <ul class="feature-list">
+                                        <li class="feature-item">- 最极致的阅读体验</li>
+                                        <li class="feature-item">- 最极致的阅读体验,发达发大水发生发生的</li>
+                                        <li class="feature-item">- 最极致的阅读体验，发生的撒旦</li>
+                                    </ul>
+                                    <a class="download-button" target="_blank" href="#" title="立即下载">立即下载</a>
+                                    <div class="qr-holder">
+                                        <h3 class="title">直接使用二维码下载</h3>
+                                        <img class="code" alt="QR Code" width="87" height="87" src="/assets/img/app/android-qr-code.jpg">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
