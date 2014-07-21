@@ -14,6 +14,10 @@ body{
     background-color: gray;
 }
 
+.page-header-fixed .page-container {
+    margin-top: 50px;
+}
+
 .login .content .register-form {
     display: block;
 }
