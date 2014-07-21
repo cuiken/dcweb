@@ -58,6 +58,9 @@ module.exports = function (app) {
     app.get('/stations', function (req, res) {
         res.render('stations');
     });
+    app.get('/stations-listview',function(req,res){
+        res.render('station-listview');
+    });
     app.get('/station/create', function (req, res) {
         res.render('add_station');
     });

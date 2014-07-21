@@ -33,7 +33,11 @@
     <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico"/>
-
+    <style>
+        .choose-view .right{
+            text-align: right;
+        }
+    </style>
 </head>
 <body class="page-header-fixed">
 <%- include header.html %>
@@ -44,7 +48,7 @@
 
     <div class="page-content-wrapper">
         <div class="page-content">
-            <%- include theme_panel.html %>
+
             <div class="row">
                 <div class="col-md-12">
                     <h3 class="page-title">
@@ -53,7 +57,12 @@
                     </h3>
                 </div>
             </div>
-
+            <div class="row choose-view">
+                <div class="col-md-12 margin-bottom-10 right">
+                    <a class="btn btn-default" href="/stations-listview"><i class="fa fa-th-list"></i> 列表视图</a>&nbsp;
+                    <a class="btn green"><i class="fa fa-cubes"></i> 收藏视图</a>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <!-- BEGIN INLINE NOTIFICATIONS PORTLET-->

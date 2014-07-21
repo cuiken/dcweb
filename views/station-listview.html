@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>Solar Cloud - Zever Solar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <meta name="MobileOptimized" content="320">
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
+    <!-- BEGIN THEME STYLES -->
+    <link href="/assets/css/style-metronic.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="/assets/css/pages/profile.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+
+        .portfolio-info span {
+            font-size: 14px;
+        }
+
+        .portfolio-info {
+            padding: 10px;
+        }
+
+        .row.portfolio-block {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .row.portfolio-block:hover {
+            background: #f1f1f1;
+        }
+
+        .share_station {
+            position: absolute;
+            right: 25px;
+            top: 5px;
+        }
+
+        .remove_station {
+            position: absolute;
+            right: 25px;
+            top: 5px;
+        }
+
+        .portfolio-block .portfolio-text{
+            padding: 0;
+        }
+        .portfolio-block .portfolio-stat{
+            padding: 0;
+        }
+        .choose-view .right{
+            text-align: right;
+        }
+    </style>
+</head>
+<body class="page-header-fixed">
+<%- include header.html %>
+<div class="clearfix">
+</div>
+<div class="page-container">
+    <%- include left_menu.html %>
+
+    <div class="page-content-wrapper">
+        <div class="page-content">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="page-title">
+                        电站列表
+                        <small>拥有电站和共享电站</small>
+                    </h3>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="margin-bottom-20">
+                        <a href="/station/create" class="btn icn-only green">Add a new Station <i
+                                class="m-icon-swapright m-icon-white"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row choose-view">
+                <div class="col-md-12 margin-bottom-10 right">
+                    <a class="btn green" href="#"><i class="fa fa-th-list"></i> 列表视图</a>&nbsp;
+                    <a class="btn btn-default" href="/stations"><i class="fa fa-cubes"></i> 收藏视图</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row portfolio-block">
+                    <div class="col-md-3  portfolio-text">
+                        <img class="img-rounded" src="http://solarcloud.zeversolar.com/res/def/icon/plant04.jpg" alt="">
+
+                        <div class="portfolio-text-info">
+                            <h4>Demo Plant</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-9 portfolio-stat">
+                        <div class="portfolio-info">
+                            E-Today
+											<span>
+                                                0.72KWh
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            E-Total
+											<span>
+                                                6.62MWh
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            总收益
+											<span>
+                                                3131.87$
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            CO2减排量
+											<span>
+                                                5.01T
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            逆变器
+											<span>
+                                                1/2
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            监控器
+											<span>
+                                                1/1
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            新错误
+											<span>
+                                                3
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            数据更新时间
+											<span>
+                                                2014-06-04 09:16:47
+											</span>
+                        </div>
+                    </div>
+                    <i class="share_station fa fa-group"></i>
+
+                </div>
+                <div class="row portfolio-block">
+                    <div class="col-md-3  portfolio-text">
+
+                        <img class="img-rounded" src="http://solarcloud.zeversolar.com/res/def/icon/plant01.jpg" alt="">
+
+                        <div class="portfolio-text-info">
+                            <h4>应用测试12</h4>
+                        </div>
+
+                    </div>
+                    <div class="col-md-9 portfolio-stat">
+                        <div class="portfolio-info">
+                            E-Today
+											<span>
+                                                0.0KWh
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            E-Total
+											<span>
+                                                20.83MWh
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            总收益
+											<span>
+                                                14578.87$
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            CO2减排量
+											<span>
+                                                15.01T
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            逆变器
+											<span>
+                                                0/12
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            监控器
+											<span>
+                                                0/1
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            新错误
+											<span>
+                                                32
+											</span>
+                        </div>
+                        <div class="portfolio-info">
+                            数据更新时间
+											<span>
+                                                2014-03-04 08:16:47
+											</span>
+                        </div>
+                    </div>
+                    <i class="remove_station fa fa-times-circle"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include footer.html %>
+<!--[if lt IE 9]>
+<script src="/assets/plugins/respond.min.js"></script>
+<script src="/assets/plugins/excanvas.min.js"></script>
+<![endif]-->
+<script src="/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<script src="/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"
+        type="text/javascript"></script>
+<script src="/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+
+<script src="/assets/scripts/app.js" type="text/javascript"></script>
+
+<script>
+    jQuery(document).ready(function () {
+        App.init();
+
+        $("#powerlist").addClass('active');
+        $("#powerlist > a > span.arrow").removeClass().addClass('selected');
+        $("#powerlist > .sub-menu > li:nth-child(1)").addClass('active');
+
+    });
+</script>
+
+</body>
+</html>
