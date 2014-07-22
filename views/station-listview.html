@@ -32,6 +32,7 @@
     <link href="/assets/css/pages/profile.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
+    <script src="/assets/plugins/pace.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico"/>
     <style>
 
@@ -94,18 +95,51 @@
 
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
-                    <div class="margin-bottom-20">
-                        <a href="/station/create" class="btn icn-only green">Add a new Station <i
-                                class="m-icon-swapright m-icon-white"></i></a>
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-search"></i>查询
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse"></a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <form class="form-horizontal" action="" method="get">
+
+                                <div class="col-md-4">
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">电站名称</label>
+
+                                        <div class="col-md-8">
+                                            <input class="form-control" type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <button class="btn btn-primary" href="">查询</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="row choose-view">
                 <div class="col-md-12 margin-bottom-10 right">
-                    <a class="btn green" href="#"><i class="fa fa-th-list"></i> 列表视图</a>&nbsp;
+                    Tips:
+                    <i class="fa fa-star"></i> 收藏
+                    &nbsp;
+                    <i class="fa fa-star-o"></i>取消收藏
+                    &nbsp;
+                    <!--<a class="btn green" href="#"><i class="fa fa-th-list"></i> 列表视图</a>&nbsp;-->
                     <a class="btn btn-default" href="/stations"><i class="fa fa-cubes"></i> 收藏视图</a>
                 </div>
             </div>
@@ -155,12 +189,7 @@
                                                 1/1
 											</span>
                         </div>
-                        <div class="portfolio-info">
-                            新错误
-											<span>
-                                                3
-											</span>
-                        </div>
+
                         <div class="portfolio-info">
                             数据更新时间
 											<span>
@@ -218,12 +247,7 @@
                                                 0/1
 											</span>
                         </div>
-                        <div class="portfolio-info">
-                            新错误
-											<span>
-                                                32
-											</span>
-                        </div>
+
                         <div class="portfolio-info">
                             数据更新时间
 											<span>
@@ -231,8 +255,30 @@
 											</span>
                         </div>
                     </div>
-                    <i class="remove_station fa fa-times-circle"></i>
+                    <div class="remove_station">
+                        <i class="fa fa-times-circle"></i>
+                        &nbsp;
+                        <i class="fa fa-star"></i>
+                    </div>
 
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-sm-12">
+                        <div class="dataTables_info" id="sample_1_info">Showing 1 to 10 of 5 entries</div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="dataTables_paginate paging_bootstrap">
+                            <ul class="pagination" style="visibility: visible;">
+                                <li class="prev"><a href="#" title="Prev"><i class="fa fa-angle-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li class="next"><a href="#" title="Next"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
