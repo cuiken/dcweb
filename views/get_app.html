@@ -37,15 +37,18 @@
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico"/>
     <style>
-        body{
+        body {
             background: #fbfbfb !important;
         }
 
+        .android .introduction,.iphone .introduction{
+            background: #eeedf2;
+        }
         .footer {
             padding: 35px 20px;
             font-size: 13px;
-            /*background: #62707f;*/
         }
+
         div#content {
             width: 900px;
             margin: 0 auto;
@@ -57,68 +60,51 @@
             padding-top: 20px;
         }
 
-        .explore-nav-wrap li{
-            width: 80px;
-            margin-right: 20px;
-        }
-        .mobile {
-            width: 900px;
-            background: #fff;
-            -moz-border-radius: 4px;
-            -webkit-border-radius: 4px;
-            border-radius: 4px;
-            padding: 27px 0 8px;
-        }
-        .mobile .device {
-            background: #fff url("/assets/img/app/mobile-android-bg.png") no-repeat scroll 30px 0;
-            position: relative;
-            height: 553px;
-        }
-
-        .device.iphone{
-            background: #fff url('/assets/img/app/mobile-iphone-bg.png') no-repeat scroll 30px 0;
-        }
         .introduction {
             width: 450px;
             float: right;
             padding: 65px 37px;
         }
+
         .page-title {
             font-size: 16px;
             font-weight: bold;
             color: #484848;
         }
+
         .feature-list {
             padding: 20px 0 30px;
             list-style: none;
             line-height: 2;
             color: #8f8f8f;
         }
+
         .android .download-button {
             background-position: 0 -60px;
         }
+
         .qr-holder {
             float: left;
             text-align: center;
             padding-top: 30px;
             position: relative;
         }
+
         .qr-holder .title, .coop-holder .title {
             font-size: 12px;
             font-weight: normal;
             color: #999;
             padding-bottom: 13px;
         }
+
         .download-button {
             width: 122px;
             height: 52px;
-            background: #fff url("/assets/img/app/mobile-download-buttons.png") no-repeat scroll 0 0;
+            line-height: 52px;
             display: block;
-            text-indent: -9999em;
+            padding:0;
         }
-        .iphone .download-button{
-            background: #fff url("/assets/img/app/mobile-download-buttons.png") no-repeat scroll 0 0;
-        }
+
     </style>
 </head>
 <body class="page-header-fixed">
@@ -131,57 +117,61 @@
 <div class="page-container">
     <div class="container">
         <div id="content">
-            <div class="tabbable tabbable-custom tabbable-full-width">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab_1" data-toggle="tab">Android</a></li>
-                    <li><a href="#tab_2" data-toggle="tab">iPhone</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade active in" id="tab_1">
-                        <div class="mobile">
-                            <div class="device android">
 
-                                <div class="introduction">
-                                    <h1 class="page-title">SolarCloud &nbsp;Android 客户端</h1>
-                                    <ul class="feature-list">
-                                        <li class="feature-item">- 最极致的阅读体验</li>
-                                        <li class="feature-item">- 最极致的阅读体验,发达发大水发生发生的</li>
-                                        <li class="feature-item">- 最极致的阅读体验，发生的撒旦</li>
-                                    </ul>
-                                    <a class="download-button" target="_blank" href="#" title="立即下载">立即下载</a>
-                                    <div class="qr-holder">
-                                        <h3 class="title">直接使用二维码下载</h3>
-                                        <img class="code" alt="QR Code" width="87" height="87" src="/assets/img/app/android-qr-code.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade in" id="tab_2">
-                        <div class="mobile">
-                            <div class="device iphone">
+            <div class="row android">
+                <div class="col-md-6">
+                    <img src="/assets/img/app/mobile-android-bg.png" alt="android"/>
+                </div>
+                <div class="col-md-6">
 
-                                <div class="introduction">
-                                    <h1 class="page-title">SolarCloud &nbsp;iPhone 客户端</h1>
-                                    <ul class="feature-list">
-                                        <li class="feature-item">- 最极致的阅读体验</li>
-                                        <li class="feature-item">- 最极致的阅读体验,发达发大水发生发生的</li>
-                                        <li class="feature-item">- 最极致的阅读体验，发生的撒旦</li>
-                                    </ul>
-                                    <a class="download-button" target="_blank" href="#" title="立即下载">立即下载</a>
-                                    <div class="qr-holder">
-                                        <h3 class="title">直接使用二维码下载</h3>
-                                        <img class="code" alt="QR Code" width="87" height="87" src="/assets/img/app/android-qr-code.jpg">
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="introduction">
+                        <h1 class="page-title">SolarCloud &nbsp;Android 客户端</h1>
+                        <ul class="feature-list">
+                            <li class="feature-item">- 最极致的阅读体验</li>
+                            <li class="feature-item">- 最极致的阅读体验,发达发大水发生发生的</li>
+                            <li class="feature-item">- 最极致的阅读体验，发生的撒旦</li>
+                        </ul>
+
+                        <a class="btn blue download-button" target="_blank" href="#" title="立即下载"><i class="fa fa-android"> 立即下载</i></a>
+
+                        <div class="qr-holder">
+                            <h3 class="title">直接使用二维码下载</h3>
+                            <img class="code" alt="QR Code" width="87" height="87"
+                                 src="/assets/img/app/android-qr-code.jpg">
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
+            <div class="row margin-top-20 iphone">
+
+                <div class="col-md-6">
+                    <div class="introduction">
+                        <h1 class="page-title">SolarCloud &nbsp;iPhone 客户端</h1>
+                        <ul class="feature-list">
+                            <li class="feature-item">- 最极致的阅读体验</li>
+                            <li class="feature-item">- 最极致的阅读体验,发达发大水发生发生的</li>
+                            <li class="feature-item">- 最极致的阅读体验，发生的撒旦</li>
+                        </ul>
+
+                        <a class="btn blue download-button" target="_blank" href="#" title="立即下载"><i class="fa fa-apple"> App Store</i></a>
+
+                        <div class="qr-holder">
+                            <h3 class="title">直接使用二维码下载</h3>
+                            <img class="code" alt="QR Code" width="87" height="87"
+                                 src="/assets/img/app/android-qr-code.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="/assets/img/app/mobile-iphone-bg.png" alt="iphone"/>
+                </div>
+            </div>
         </div>
     </div>
+
+</div>
+</div>
 
 </div>
 <hr/>
