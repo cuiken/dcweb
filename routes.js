@@ -56,6 +56,9 @@ module.exports = function (app) {
     app.get('/chart/input', function (req, res) {
         res.render('chart/input_chart');
     });
+    app.get('/chart/device', function (req, res) {
+        res.render('chart/device_count');
+    });
 
 
     app.get('/stations', function (req, res) {
@@ -107,6 +110,9 @@ module.exports = function (app) {
     });
     app.get('/admin/users', function (req, res) {
         res.render('admin/userList');
+    });
+    app.get('/admin/operates', function (req, res) {
+        res.render('admin/operateList');
     });
 
     app.get('/powerInfo/:period/:date', function (req, res, next) {
